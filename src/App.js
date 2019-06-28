@@ -1,25 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { ThemeProvider } from "styled-components";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import BottomNavigation from "./components/organisms/BottomNavigation";
+import BottomNavigationAction from "./components/molecules/BottomNavigationAction";
+import Favorite from "./pages/Favorite";
+import Today from "./pages/Today";
+import Map from "./pages/Map";
+import { CESTheme } from "./themes";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.StrictMode>
+      <ThemeProvider theme={CESTheme}>
+        <Router>
+          <Route exact path="/" component={Today} />
+          <Route path="/favorite" component={Favorite} />
+          <Route path="/map" component={Map} />
+          <BottomNavigation>
+            <BottomNavigationAction to="/favorite" icon="favorite">
+              Favoris
+            </BottomNavigationAction>
+            <BottomNavigationAction exact to="/" icon="today">
+              Programme
+            </BottomNavigationAction>
+            <BottomNavigationAction to="/map" icon="location_on">
+              Plan
+            </BottomNavigationAction>
+          </BottomNavigation>
+        </Router>
+      </ThemeProvider>
+    </React.StrictMode>
   );
 }
 
