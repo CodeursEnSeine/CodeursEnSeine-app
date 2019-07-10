@@ -1,0 +1,271 @@
+{
+  "name": "Fake CES 2019",
+  "categories": [
+    {
+      "id": "db4af8b6-9236-5442-a563-c94dd3701784",
+      "name": "Front"
+    },
+    {
+      "name": "Back",
+      "id": "0284f44a-8d7e-51f5-a234-fedd3cafe817"
+    }
+  ],
+  "formats": [
+    {
+      "name": "Conf",
+      "id": "1efbf4c9-3999-5487-9f42-08a68f6c0bf4"
+    },
+    {
+      "name": "quicky",
+      "id": "97460e46-48f8-5d58-b08b-73e7f6c10e6e"
+    }
+  ],
+  "conferenceDates": {
+    "start": "2019-04-29T22:00:00.000Z",
+    "end": "2019-04-29T22:00:00.000Z"
+  },
+  "talks": [
+    {
+      "id": "5Yqtg0FOby8t9XOKX4on",
+      "title": "\"Je t’ai pas dit, on passe la prod sous kubernetes\"",
+      "state": "submitted",
+      "level": "beginner",
+      "abstract": "Il est des choix techniques imposés par le marché et les clients qui font qu’en un temps record toute l’équipe doive se former à une nouvelle technologie : Kubernetes ! Facile on a déjà presque toutes nos applications dockerisées … En fait non, ce n’est pas si simple que ça. Du fonctionnement de Kubernetes, au déploiement des applications, jusqu’à la manière de développer, il a fallu tout réapprendre.\nJ’aborderai toutes les étapes de migration que nous avons réalisées qui fait que maintenant on peut le dire : notre prod tourne sous Kubernetes.",
+      "categories": "0284f44a-8d7e-51f5-a234-fedd3cafe817",
+      "formats": "1efbf4c9-3999-5487-9f42-08a68f6c0bf4",
+      "speakers": ["0B4WN6hn3kghsIqMicYjfa5Wt7k2"],
+      "comments": "Another conf ... "
+    },
+    {
+      "id": "DGGaW2gt47pxXgq9BZaM",
+      "title": "UX War, what f***ing software should i use to design my UI ?!",
+      "state": "submitted",
+      "level": "beginner",
+      "abstract": "Vous êtes au début d'un nouveau projet... vous êtes un peu old school et vous designez sur Photoshop depuis déjà quelques années maintenant... Savez-vous qu'il existe des software puissants et accessibles pour designer vos interfaces de manière optimisée ? Et si vous le savez,  qu'est-ce qui vous freine ? Le nombre de software trop important ? Le manque de temps pour s'investir et découvrir une nouvelle manière de faire ? La peur de passer sur un software obsolète d'ici quelques mois ?\nBref, plusieurs raisons font qu'aujourd'hui ce n'est pas facile de trouver le bon software pour designer la solution que l'on veut.\nPendant ce talk, j'essayerai de détailler un maximum les software en vogue aujourd'hui, en fonction des besoins que vous pouvez avoir, des compétences requises, des qualités des softwares et des défauts. ",
+      "categories": "db4af8b6-9236-5442-a563-c94dd3701784",
+      "formats": "97460e46-48f8-5d58-b08b-73e7f6c10e6e",
+      "speakers": ["n2YYKtOmS5dJGita1i9gmfZSG6K2"],
+      "comments": "coucou les orgas (2)"
+    },
+    {
+      "id": "Da5VXCk07XgyvBspQWWx",
+      "title": "Dis papa, est-ce que ça pollue Internet?",
+      "state": "submitted",
+      "level": "beginner",
+      "abstract": "Les anciens de l’ère “pré-internet” utilisaient le calepin, un botin, une encyclopédie ou une carte routière… En 2018, nous préférons l’agenda Google, wikipedia et le GPS. Mais ce virage vers le tout-numérique en l’espace de 20 ans a des lourdes conséquences sur notre environnement. Nous verrons ce qui se cache derrière nos écrans et comment tenter de trouver des solutions pour limiter l’impact du web",
+      "categories": "0284f44a-8d7e-51f5-a234-fedd3cafe817",
+      "formats": "1efbf4c9-3999-5487-9f42-08a68f6c0bf4",
+      "speakers": ["fsqyLVqRcAUxVsYO4I36FwgnnDe2"],
+      "comments": "test d'envoi du talk du CFP"
+    },
+    {
+      "id": "H6hSWT3gMPPhoV2bPY5k",
+      "title": "Secretary Vs Dev : retour d expérience d'une assistante administrative dans un dev studio",
+      "state": "submitted",
+      "level": "beginner",
+      "abstract": "Vous vous êtes déjà sentie comme une baleine dans Microcosmos ? Moi ça m'est arrivé... Quand sur mon parcours professionnel j'ai rencontré un studio de développement. J'avais déjà écumé pas mal de secteurs, bien décidée à ne pas signer de CDI tant que je ne me sentirai pas vraiment bien quelque part ! Mais jamais rien qui ressemblait de près ou de loin au BEARSTUDIO.\n\nJ'ai plongé sans bouteille et sans préparation dans un monde où l'on m'a parlé d'agilité, d’auto-gouvernance, mais aussi de sprint, de merge request, d'issue et une flopée d'autre terme que je ne maîtrise toujours pas... En contrepartie je leur ai parlé contrat cadre, convention collective, gestion des congés, plan comptable...\n\n1 an et demi plus tard je suis toujours là, eux aussi, on s'est apprivoisé on a appris à travailler ensemble et à se comprendre. C'est cette expérience singulière mais tellement enrichissante que je voudrais partager parce que franchement je ne regrette pour rien au monde d'avoir osé me lancer dans cette aventure professionnelle et humaine !",
+      "categories": "0284f44a-8d7e-51f5-a234-fedd3cafe817",
+      "formats": "1efbf4c9-3999-5487-9f42-08a68f6c0bf4",
+      "speakers": ["24si0s4B8lYEwbg5d4sshrMyklS2"],
+      "comments": null
+    },
+    {
+      "id": "JiWBMLXkkAIxZNGDTbA7",
+      "title": "Retour d'expérience d'un développeur qui monte sa boite",
+      "state": "submitted",
+      "level": "beginner",
+      "abstract": "En tant que développeur, nous en avons marre de commerciaux bullshit qui ne comprennent rien a notre métier et qui pensent que nous sommes qu'une ressource...\n\n\nFace à ce problème j'ai identifié quelques options :\n* Bosser en startup : dans l'idée c'est bien mais les vautours finissent toujours par arriver :p\n* Bosser chez Google : mon ego n'aurait pas supporté de me faire refuser, du coup j'ai pas essayé...\n* Créer ma propre startup : ma meilleure option est de créer un studio de développeurs par les développeurs et pour les développeurs.\n\nAujourd'hui, avec 4 ans d'existence (et 3 bilans comptables positifs), il est temps de partager mon expérience de développeur entrepreneur et d'essayer de montrer qu'on a pas besoin d'avoir fait une super école de management du commerce international du marketing digitale de l'élite du monde  (où t’achètes ton diplôme) pour gérer une boite #NoBullshit \n\n\nQuelques exemples de situations :\n* Comment j'ai responsabilisé mon équipe en prenant des vacances ?\n* Comment  j'ai recruté un devOps en république dominicaine ?\n* Pourquoi notre secrétaire donne des conférences au DevFest de Brest ?\n* Pourquoi j'ai dû engueuler mon développeur front pour lui acheter un mac ?\n* Comment j'ai fait pour que les salariés décident d'augmenter mon salaire et celui de mon associé plutôt que les leurs\n",
+      "formats": "1efbf4c9-3999-5487-9f42-08a68f6c0bf4",
+      "speakers": ["HfBwLxQ1wyO4giltVDafRIFILLJ2"],
+      "comments": "WESH ALORS !"
+    },
+    {
+      "id": "VrY7HFeXxyoqtBpH0rZM",
+      "title": "Prestashop : les basiques et les subtilités de la bête noire",
+      "state": "submitted",
+      "level": "beginner",
+      "abstract": "C'est le moment de découvrir la légende de Prestashop. Sa refonte partielle se basant sur le framework Symfony a changé la face de cet outil qui permet de tout faire (ou presque) mais en étant toujours autant tiré par les cheveux. Architecture, override, hook, module, widget, Smarty / Twig, thème, traduction, ... Nous aborderons un maximum de points à connaître avant de se lancer dans le développement d'un module sur Prestashop. Parce que oui, un jour ou l'autre, vous vous retrouverez à faire du Prestashop.",
+      "categories": "0284f44a-8d7e-51f5-a234-fedd3cafe817",
+      "formats": "1efbf4c9-3999-5487-9f42-08a68f6c0bf4",
+      "speakers": [
+        "WsnpBzWvITMX3d3y1wmhIf2nX5h2",
+        "wlwAd3jkZfOHm20wcec3N6OTmla2"
+      ],
+      "comments": "Lalala c'est un test pour une conférence incroyable"
+    },
+    {
+      "id": "WaldaWsaIGT0xxyBTLVS",
+      "title": "Gotta catch React ? Un pokédex pour les noobs !",
+      "state": "submitted",
+      "level": "beginner",
+      "abstract": "Si les frameworks JS ne sont pas (encore) ta spécialité, si tu as envie de capitaliser sur l'une des technos front du moment, ou si tu veux juste voir à quoi React ressemble ce talk est fait pour toi !\n\n\nDans cette conférence, on découvrira le plus simplement possible les bases de React à travers un petit projet : un Pokédex. Bon, même si tu connais pas l'univers de Pokémon, tu t'y retrouveras sans soucis ne t'inquiète pas ! Le but ici est de démystifier toutes les facettes de ce framework : create-react-app, state, props, components ainsi que d'autres trucs cools !",
+      "categories": "db4af8b6-9236-5442-a563-c94dd3701784",
+      "formats": "1efbf4c9-3999-5487-9f42-08a68f6c0bf4",
+      "speakers": ["n2YYKtOmS5dJGita1i9gmfZSG6K2"],
+      "comments": "Coucou les orgas"
+    },
+    {
+      "id": "We3HrDiIwgJCuGxiey2f",
+      "title": "Need hel(p)m ?",
+      "state": "submitted",
+      "level": "intermediate",
+      "abstract": "Helm se présente comme le package manager de Kubernetes. Sur le papier la promesse est simple \"packager, installer et mettre à jour les applications les plus complexes de façon simple et efficace\".\n\nAprès un rapide tour d'horizon de ce que propose Helm, nous vous parlerons du bon et du moins bon afin qu'en sortant vous sachiez si, oui ou non, \"you need hel(p)m\"...",
+      "categories": "0284f44a-8d7e-51f5-a234-fedd3cafe817",
+      "formats": "1efbf4c9-3999-5487-9f42-08a68f6c0bf4",
+      "speakers": [
+        "0B4WN6hn3kghsIqMicYjfa5Wt7k2",
+        "uPTrOsxxDKcCVEY9OPUmot0Dts02"
+      ],
+      "comments": "Hello les gentils orgas "
+    },
+    {
+      "id": "WuAGecgugxjLaSpdr72b",
+      "title": "jq, JSON comme un pro",
+      "state": "submitted",
+      "abstract": "Le JSON est omniprésent dans nos environnements. Nous manipulons ce format de représentation à longueur de journée. Pour nous faciliter la tâche, nous pouvons utiliser l'utilitaire en ligne de commande nommé **./jq**.\n\nPrenons le temps d'explorer le monde fascinant de jq et de partager quelques astuces.\n",
+      "categories": "0284f44a-8d7e-51f5-a234-fedd3cafe817",
+      "formats": "1efbf4c9-3999-5487-9f42-08a68f6c0bf4",
+      "speakers": ["LrZTk8T34RR6f1282WRVajLXgx62"],
+      "comments": "C'est plutôt un TIA mais il y a de quoi faire une conf."
+    },
+    {
+      "id": "XCxTQMOtEjKbRKpyTZZS",
+      "title": "Automate All The Things",
+      "state": "submitted",
+      "level": "beginner",
+      "abstract": "Comment harmoniser les process d’une nouvelle équipe de dev qui se construit tout en ne ramenant pas de la lourdeur de process ? Consigne supplémentaire : fini de délivrer tous les 6 mois une nouvelle version de l’application, à partir de maintenant c’est tous les jours ! \nLa réponse à tout ça : en masquant la complexité et les actions répétitives avec de l’automatisation. \nNous verrons comment nous avons amené une rigueur et des conventions au sein d’une équipe afin de garantir une stabilité et une rapidité de livraison à travers différents outils que nous avons mis en place au fur et à mesure qui permettent d’automatiser (et de sécuriser le développeur). \nNous allons vous expliquer comment nous avons procédé à notre automatisation : De la mise en place de jobs sous Jenkins qui automatisent le process de build, de test, de package et qui s'occupent même de déployer en prod jusqu'à l'intégration de bot dans Slack qui permettent de gérer des actions répétitives contraignantes.\n",
+      "categories": "0284f44a-8d7e-51f5-a234-fedd3cafe817",
+      "formats": "1efbf4c9-3999-5487-9f42-08a68f6c0bf4",
+      "speakers": [
+        "0B4WN6hn3kghsIqMicYjfa5Wt7k2",
+        "uPTrOsxxDKcCVEY9OPUmot0Dts02"
+      ],
+      "comments": "De la conf et du troll"
+    },
+    {
+      "id": "fTSUAqR4XU0x3GbpJ8AQ",
+      "title": "1 seule page HTML pour servir 1 million d'URLs avec le web static content",
+      "state": "submitted",
+      "level": "beginner",
+      "abstract": "Nos bons vieux navigateurs ont bien évolués ces dernières années. A tel point qu'ils peuvent remettre en question la façon d'architecturer nos applications web avec le **static content hosting**.\n\nDans cette session, nous allons voir comment créer un site servant **des milliers d'URLs avec une seule page HTML statique**. Oui, oui. Sans code serveur ! Pas de Java, pas de PHP, ni même de Node.JS.\n",
+      "categories": "db4af8b6-9236-5442-a563-c94dd3701784",
+      "formats": "1efbf4c9-3999-5487-9f42-08a68f6c0bf4",
+      "speakers": ["LrZTk8T34RR6f1282WRVajLXgx62"],
+      "comments": "Parce qu'elle est trop cool !"
+    },
+    {
+      "id": "g4cJ5zHp6iUKdBDd8pWD",
+      "title": "Ma boite n'est pas une startup... je suis un looser :(",
+      "state": "submitted",
+      "level": "beginner",
+      "abstract": "Je ne vous apprends rien, depuis des années c'est devenu hype de monter des startups... à tel point que monter une société qui n'est pas une startup c'est  : \n- soit être un looser\n- soit être un vautour qui va essayer de voler le noble argent des entrepreneurs ultra visionnaires qui sont à la tête de la future licorne de la région\n\nUn peu comme l'Agilité, j'ai l'impression que le sens du mot \"startup\" s'est perdu et qu'aujourd'hui nous l'utilisons dans beaucoup trop de sociétés pour justifier des comportements égoïstes de faux Steeve Jobs en puissance.\n\nAprès 4 ans dans une startup en tant que CTO et 4 ans dans une société de service, j'ai vu des vraies et des fausses startup. j'aimerais à travers ce talk vous dresser un constat et essayer de dissiper un peu ce nuage de bullshit.\n\nPS : ce sujet de talk a été écrit avec une bonne dose de rage après un bullshitage de startup de trop... Mais pas d'inquiétude : il m'en restera pour la conférence !",
+      "formats": "1efbf4c9-3999-5487-9f42-08a68f6c0bf4",
+      "speakers": ["HfBwLxQ1wyO4giltVDafRIFILLJ2"]
+    },
+    {
+      "id": "lBMUkv9Ik5CPNLG7VsbK",
+      "title": "Ergonomie web, les bases pour tous",
+      "state": "submitted",
+      "level": "beginner",
+      "abstract": "Vous êtes développeur, votre code est parfait, votre dernier refactoring rend ce dernier encore plus lisible, vous avez éradiqué tous les bugs !\n\nC’est le jour J, la mise en prod ! (Et on est même pas vendredi !)\n\nEt là c’est le drame! Retours de vos utilisateurs: \n- \"Pourquoi quand je clique là il ne se passe rien ?\"\n- \"C'est super compliqué !\"\n- \"On comprend rien\"... \n\nAlors (re)découvrez les bases de l’ergonomie et sublimez ce code qui vous est si cher par une interface ergonomique : vos utilisateurs vous remercieront !",
+      "categories": "db4af8b6-9236-5442-a563-c94dd3701784",
+      "formats": "1efbf4c9-3999-5487-9f42-08a68f6c0bf4",
+      "speakers": ["rw2JAQi5leaJbxTFQRCalTPIHes1"],
+      "comments": null
+    },
+    {
+      "id": "sxUdbhjnSoRUh2b1FpYW",
+      "title": "Méthode d'organisation personnelle",
+      "state": "submitted",
+      "level": "beginner",
+      "abstract": "Comme beaucoup de développeurs, j'ai toujours eu des problèmes pour gérer ma liste de choses à faire au quotidien.\n\nJ'ai lu pas mal de bouquins, essayé pas mal de méthodologies soi disant révolutionnaires mais ces systèmes n'ont souvent pas tenu sur la longueur...\n\nEn effet, en fonction du projet, du poste et même de mon évolution personnelle, ces méthodologies se sont vite retrouvées trop contraignantes.\n\nEn revanche, au fil du temps, j'ai gardé quelques petites briques qui fonctionnent bien.\n\nJ'aimerais dans ce quicky vous présenter mes petits \"quick win\" d'organisation personnelle qui me permettent de paraître organisé. 😜",
+      "formats": "97460e46-48f8-5d58-b08b-73e7f6c10e6e",
+      "speakers": ["HfBwLxQ1wyO4giltVDafRIFILLJ2"]
+    }
+  ],
+  "speakers": [
+    {
+      "uid": "0B4WN6hn3kghsIqMicYjfa5Wt7k2",
+      "displayName": "Pierre LERESTEUX",
+      "bio": "Développeur, DevOps, Lead Dev, IntelliJ fanboy, … autant de termes me définissant, mais avant tout une personne qui aime créer par le code mais qui doute (ne dit-on pas ”tester c’est douter” ? ). Java, Kotlin ... mais principalement tout ce qui touche au backend ... (la magie noire du CSS pour moi, non merci ... )",
+      "company": "Saagie",
+      "photoURL": "https://lh3.googleusercontent.com/-j3Ueavrt96M/AAAAAAAAAAI/AAAAAAAAR_I/V9bOf2Cnozg/photo.jpg",
+      "twitter": "@pierreLeresteux"
+    },
+    {
+      "uid": "n2YYKtOmS5dJGita1i9gmfZSG6K2",
+      "displayName": "Philippe Chevreul",
+      "bio": "Je suis un simple étudiant de 21 ans en licence métier du numérique et alternant au Bear Studio à Rouen en tant qu'UX Designer / Developper Front. Passionné de développement web et de design depuis très longtemps, j'ai toujours voulu partager des connaissances avec les gens !\nAh oui et je suis aussi co-organisateur de Codeurs en Seine depuis quelques mois ! :-)",
+      "company": "Bear Studio",
+      "photoURL": "https://lh4.googleusercontent.com/-3NJb_7kmmEI/AAAAAAAAAAI/AAAAAAAAAAA/AGDgw-gTRJOlAKGtfrhGOCihshwe7-Wlhg/mo/photo.jpg",
+      "twitter": "@PhilCvrl",
+      "github": "/"
+    },
+    {
+      "uid": "fsqyLVqRcAUxVsYO4I36FwgnnDe2",
+      "displayName": "Geoffroy Perrin",
+      "bio": "Après avoir fondé une agence de développement éco-responsable en 2010, j’ai intégré Attineos en 2018 comme Ingénieur études et développement en PHP. Même s’il n’est pas toujours évident de concilier les nouvelles technos et l’environnement, je cherche dans mon travaille, outre le code, à sensibiliser et alerter sur les questions environnementales qui est un défi majeur des années à venir. \nJe m'investi dans la communauté tech rouennaise en tant que Co-organisateur de Codeurs en seine.",
+      "company": "Attineos",
+      "photoURL": "https://lh4.googleusercontent.com/-WrKLxQYI1Fc/AAAAAAAAAAI/AAAAAAAAAGo/m9sg_iNnvTc/photo.jpg",
+      "twitter": "@enaoweb"
+    },
+    {
+      "uid": "24si0s4B8lYEwbg5d4sshrMyklS2",
+      "displayName": "Claire Jeanne",
+      "bio": "Issue d'une formation administrative plus que classique j'ai volontairement enchaîné les CDD pour ne pas avoir le sentiment d'être coincé dans une boite ou dans un secteur d'activité qui ne me correspondait pas. Assistante administrative oui ! Mais pas plante verte ! \nDe la pétrochimie à l'associatif en passant par la maintenance industrielle et le commerce je savais ce que je ne voulais pas mais n'avais pas vraiment d'idée de l'endroit où je me sentirais bien. Et un jour j'ai eu l'opportunité de travailler dans un studio de CTO à louer ... Et j'ai signé ! \n",
+      "company": "BEARSTUDIO",
+      "photoURL": "https://lh4.googleusercontent.com/-duScLtM8H9k/AAAAAAAAAAI/AAAAAAAAAAA/AGDgw-jU7L5o8YhyJmB562BiNVCHBJ3J2g/mo/photo.jpg",
+      "twitter": "@c_jeanne63",
+      "github": "@ClaireBS"
+    },
+    {
+      "uid": "HfBwLxQ1wyO4giltVDafRIFILLJ2",
+      "displayName": "Rudy Baer",
+      "bio": "CTO (et CEO) depuis 4 ans chez BearStudio. \nMon travail au quotidien consiste a résoudre les problèmes techniques ET humains posés par le développement logiciel.\nDéveloppeur Java de formation, après quelques années en SSII et en startup, j'ai finalement décidé de monter ma boite.\nJe suis également un des organisateurs des meetups (ancien JUG) et de Codeurs En Seine à Rouen. ",
+      "company": "BearStudio",
+      "photoURL": "https://lh4.googleusercontent.com/-GUIo9muY3bs/AAAAAAAAAAI/AAAAAAAAAGA/bzO4wcPA6qI/photo.jpg",
+      "twitter": "@RudyBaer",
+      "github": "RudyBaer"
+    },
+    {
+      "uid": "WsnpBzWvITMX3d3y1wmhIf2nX5h2",
+      "displayName": "Florian Dupuis",
+      "photoURL": "https://pbs.twimg.com/profile_images/1079735894263980034/9YKNVvzj_normal.jpg",
+      "twitter": "@flodupuisweb"
+    },
+    {
+      "uid": "wlwAd3jkZfOHm20wcec3N6OTmla2",
+      "displayName": "Laurie 🕉️",
+      "bio": "Laurie, 26 ans, passionnée de web et de licorne, je suis oursonne chez BearStudio le jour et blogueuse la nuit. Véritable couteau suisse du web, je suis développeuse de base, mais je suis également chef de projet et j'ai une appétence très forte pour la communication. Mes années en agence web m'ont permis d'apprendre énormément sur de nombreux domaines. Curieuse dans la vie, j'aime partager mes galères et mes astuces avec les autres curieux.",
+      "company": "BearStudio",
+      "photoURL": "https://pbs.twimg.com/profile_images/1093584836760084480/47dOoOdD_normal.jpg",
+      "twitter": "@PtiteRapporteuz",
+      "github": "PtiteRapporteuZ"
+    },
+    {
+      "uid": "uPTrOsxxDKcCVEY9OPUmot0Dts02",
+      "displayName": "Ghislain Mahieux",
+      "bio": "Développeur passionné et touche à tout depuis 15 ans. Adepte du principe KISS avec une tendance craftsman.\nUn peu ops sur les bords..",
+      "company": "Saagie",
+      "photoURL": "https://avatars2.githubusercontent.com/u/2302324?v=4",
+      "twitter": "@GhislainMahieux",
+      "github": "gmahieux"
+    },
+    {
+      "uid": "LrZTk8T34RR6f1282WRVajLXgx62",
+      "displayName": "S LECACHE",
+      "bio": "Très attaché au logiciel libre pour découvrir comment les autres développeurs programment et comment ces projets fonctionnent, j’aime le code !\n\nDéveloppeur C, puis web, puis Java EE, puis PHP, puis Android, puis… Le langage de programmation n’est qu’un moyen pour moi.\n\nEn tant qu’architecte je suis continuellement partagé entre “aller vite” et “s’attarder sur les détails”.",
+      "company": "Prosodie",
+      "photoURL": "https://lh3.googleusercontent.com/-0N4X-9LDHto/AAAAAAAAAAI/AAAAAAAAAAA/AGDgw-jCiYG2ysGUN73Xz-8OYGtpvIw5FA/mo/photo.jpg",
+      "twitter": "@slecache"
+    },
+    {
+      "uid": "rw2JAQi5leaJbxTFQRCalTPIHes1",
+      "displayName": "Ivan Dalmet",
+      "bio": "Lead Designer, Dev Front et passionné de web et de design chez Saagie (Rouen, France). Cela fait plus de 10 ans que je joue avec le design et le développement web pour essayer de proposer des interfaces agréables à utiliser. Du Design Thinking à React, du wireframe au HTML/CSS, j’aime utiliser tous les outils disponibles pour produire la meilleur expérience utilisateur. Je suis aussi dans l'équipe d'organisation de Codeurs en Seine, une conférence gratuite pour les développeurs en Normandie (France).\n",
+      "company": "Saagie",
+      "photoURL": "https://lh3.googleusercontent.com/-I1W6L3ZCqaw/AAAAAAAAAAI/AAAAAAAAAeo/IH_htc7vFpE/photo.jpg",
+      "twitter": "@ivandalmet"
+    }
+  ]
+}

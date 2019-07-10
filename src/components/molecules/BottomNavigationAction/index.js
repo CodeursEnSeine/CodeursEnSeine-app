@@ -1,7 +1,21 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { Route } from "react-router-dom";
 import BottomNavigationActionElement from "./BottomNavigationActionElement";
 import Link from "../../atoms/Link";
+
+const propTypes = {
+  className: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.arrayOf(PropTypes.string)
+  ]),
+  exact: PropTypes.bool,
+  to: PropTypes.string.isRequired
+};
+
+const defaultProps = {
+  exact: false
+};
 
 function BottomNavigationAction({ className, exact, to, ...props }) {
   return (
@@ -20,3 +34,6 @@ function BottomNavigationAction({ className, exact, to, ...props }) {
 }
 
 export default BottomNavigationAction;
+
+BottomNavigationAction.propTypes = propTypes;
+BottomNavigationAction.defaultProps = defaultProps;

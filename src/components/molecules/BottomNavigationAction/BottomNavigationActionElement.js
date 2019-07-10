@@ -3,6 +3,16 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import Icon from "../../atoms/Icon";
 
+const propTypes = {
+  icon: PropTypes.string.isRequired,
+  children: PropTypes.string.isRequired,
+  selected: PropTypes.bool
+};
+
+const defaultProps = {
+  as: "div"
+};
+
 function BottomNavigationActionElement({
   as: Element,
   icon,
@@ -17,15 +27,8 @@ function BottomNavigationActionElement({
   );
 }
 
-BottomNavigationActionElement.defaultProps = {
-  as: "div"
-};
-
-BottomNavigationActionElement.propTypes = {
-  icon: PropTypes.string.isRequired,
-  children: PropTypes.string.isRequired,
-  selected: PropTypes.bool
-};
+BottomNavigationActionElement.defaultProps = defaultProps;
+BottomNavigationActionElement.propTypes = propTypes;
 
 export default styled(BottomNavigationActionElement)`
   color: ${props =>
