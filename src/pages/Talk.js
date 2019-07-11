@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import Layout from "../components/templates/Layout";
 import ConferenceHall from "../services/ConferenceHall";
+import TalkDisplay from "../components/organisms/TalkDisplay";
 
 const propTypes = {
   match: PropTypes.object.isRequired
@@ -27,8 +28,8 @@ function Talk({ match }) {
   }, [match.params.id]);
 
   return (
-    <Layout loading={loading} title={talk.title}>
-      <p>Section</p>
+    <Layout loading={loading} title={`${talk.type} - ${talk.hour}`}>
+      <TalkDisplay talk={talk} />
     </Layout>
   );
 }
