@@ -1,5 +1,7 @@
-import styled from "styled-component";
+import styled from "styled-components";
 
 export default styled.div`
   display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
 `;

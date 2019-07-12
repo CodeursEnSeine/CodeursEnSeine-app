@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import CardTitle from "../../atoms/CardTitle";
 import CardSubTitle from "../../atoms/CardSubTitle";
+import CardFooter from "../../atoms/CardFooter";
 import Badge from "../../atoms/Badge";
 import Link from "../../atoms/Link";
+import Icon from "../../atoms/Icon";
+import Favorite from "../../../services/Favorite";
+import { FavoritesContext } from "../../../contexts/FavoritesContext";
 
 const propTypes = {
   as: PropTypes.string
@@ -14,21 +18,58 @@ const defaultProps = {
   as: "div"
 };
 
-const Card = ({ as: Tag, conference, to, ...props }) => {
-  const card = (
-    <Tag {...props}>
+const DivIcon = styled(Icon)`
+  margin: ${props => props.theme.spacing}px;
+  color: ${props => props.theme.colors.secondary};
+  cursor: pointer;
+`;
+
+const FavoriteIcon = styled(DivIcon)`
+  color: ${props => props.theme.colors.favorite};
+`;
+
+function Card({ as: Tag, conference, to, ...props }) {
+  const favoritesContext = useContext(FavoritesContext);
+
+  let header = (
+    <React.Fragment>
       <CardTitle>{conference.title}</CardTitle>
       <CardSubTitle>{conference.speaker}</CardSubTitle>
-      <Badge>Salle {conference.room}</Badge>
-    </Tag>
+    </React.Fragment>
   );
 
   if (to) {
-    return <Link to={to}>{card}</Link>;
+    header = <Link to={to}>{header}</Link>;
   }
 
-  return card;
-};
+  const favorite = Favorite.isFavorite(conference.id);
+
+  return (
+    <Tag {...props}>
+      {header}
+      <CardFooter>
+        <Badge>Salle {conference.room}</Badge>
+        {favorite ? (
+          <FavoriteIcon
+            onClick={() => {
+              favoritesContext.removeFavorite(conference.id);
+            }}
+          >
+            favorite
+          </FavoriteIcon>
+        ) : (
+          <DivIcon
+            onClick={() => {
+              favoritesContext.addFavorite(conference.id);
+            }}
+          >
+            favorite_border
+          </DivIcon>
+        )}
+      </CardFooter>
+    </Tag>
+  );
+}
 
 export default styled(Card)`
   box-shadow: ${props => props.theme.card.boxShadow};
