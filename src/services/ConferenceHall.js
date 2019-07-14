@@ -1,5 +1,14 @@
 import Cache from "./pwa/Cache";
 
+function sleep(milliseconds) {
+  var start = new Date().getTime();
+  for (var i = 0; i < 1e7; i++) {
+    if (new Date().getTime() - start > milliseconds) {
+      break;
+    }
+  }
+}
+
 export default class ConferenceHall {
   static async getData() {
     // const response = await fetch("./confs.json");
@@ -9,6 +18,8 @@ export default class ConferenceHall {
     // cache.put(new Request("./confs.json"), new Response(json));
 
     // return json;
+
+    sleep(1000);
 
     return [
       {

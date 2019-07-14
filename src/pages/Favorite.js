@@ -3,10 +3,11 @@ import Layout from "../components/templates/Layout";
 import { FavoritesContext } from "../contexts/FavoritesContext";
 import ConferenceHall from "../services/ConferenceHall";
 import Card from "../components/molecules/Card";
+import { useLoader } from "../hooks/useLoader";
 
 export default function Favorite() {
-  const [loading, setLoading] = useState(true);
   const [talks, setTalks] = useState([]);
+  const [loading, setLoading, Loader] = useLoader();
 
   useEffect(() => {
     async function fetchData() {
@@ -16,7 +17,7 @@ export default function Favorite() {
     }
 
     fetchData();
-  }, []);
+  }, [setLoading]);
 
   const favoritesContext = useContext(FavoritesContext);
 
@@ -34,11 +35,15 @@ export default function Favorite() {
 
   return (
     <Layout title="Favoris">
-      {talks.map(
-        talk =>
-          favoritesContext.state.favorites.includes(talk.id) && (
-            <Card key={talk.id} to={`/talks/${talk.id}`} conference={talk} />
-          )
+      {loading ? (
+        <Loader />
+      ) : (
+        talks.map(
+          talk =>
+            favoritesContext.state.favorites.includes(talk.id) && (
+              <Card key={talk.id} to={`/talks/${talk.id}`} conference={talk} />
+            )
+        )
       )}
     </Layout>
   );

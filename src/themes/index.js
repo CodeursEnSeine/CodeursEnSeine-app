@@ -22,5 +22,9 @@ export const CESTheme = {
   card: {
     boxShadow: "0px 0px 20px rgba(0, 102, 179, 0.2)",
     borderRadius: "4px"
+  },
+  favorite: {
+    color: "#E52158",
+    boxShadow: "0px 0px 20px rgba(229, 33, 88, 0.3)"
   }
 };
