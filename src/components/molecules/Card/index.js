@@ -34,7 +34,11 @@ function Card({ as: Tag, conference, to, ...props }) {
   let header = (
     <React.Fragment>
       <CardTitle>{conference.title}</CardTitle>
-      <CardSubTitle>{conference.speaker}</CardSubTitle>
+      <CardSubTitle>
+        {conference.speakers.map(speaker => (
+          <span key={speaker}>{speaker}</span>
+        ))}
+      </CardSubTitle>
     </React.Fragment>
   );
 
