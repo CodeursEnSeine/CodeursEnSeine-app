@@ -1,0 +1,9 @@
+{
+  "talks": [
+    { "id": "5Yqtg0FOby8t9XOKX4on", "room": "A", "hour": "9h00" },
+    { "id": "DGGaW2gt47pxXgq9BZaM", "room": "A", "hour": "10h00" },
+    { "id": "Da5VXCk07XgyvBspQWWx", "room": "B", "hour": "10h00" },
+    { "id": "JiWBMLXkkAIxZNGDTbA7", "room": "C", "hour": "10h00" },
+    { "id": "VrY7HFeXxyoqtBpH0rZM", "room": "D", "hour": "10h00" }
+  ]
+}

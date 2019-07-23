@@ -1,23 +1,11 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext } from "react";
 import Layout from "../components/templates/Layout";
 import { FavoritesContext } from "../contexts/FavoritesContext";
-import ConferenceHall from "../services/ConferenceHall";
 import Card from "../components/molecules/Card";
-import { useLoader } from "../hooks/useLoader";
+import { useTalks } from "../hooks/useTalks";
 
 export default function Favorite() {
-  const [talks, setTalks] = useState([]);
-  const [loading, setLoading, Loader] = useLoader();
-
-  useEffect(() => {
-    async function fetchData() {
-      const data = await ConferenceHall.getData();
-      setTalks(data);
-      setLoading(false);
-    }
-
-    fetchData();
-  }, [setLoading]);
+  const [talks, loading, Loader] = useTalks();
 
   const favoritesContext = useContext(FavoritesContext);
 

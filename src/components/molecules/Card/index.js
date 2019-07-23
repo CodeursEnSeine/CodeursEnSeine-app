@@ -31,10 +31,16 @@ const FavoriteIcon = styled(DivIcon)`
 function Card({ as: Tag, conference, to, ...props }) {
   const favoritesContext = useContext(FavoritesContext);
 
+  const speakers = conference.speakers
+    .map(speaker => speaker.displayName)
+    .join(" • ");
+
   let header = (
     <React.Fragment>
       <CardTitle>{conference.title}</CardTitle>
-      <CardSubTitle>{conference.speaker}</CardSubTitle>
+      <CardSubTitle>
+        <span>{speakers}</span>
+      </CardSubTitle>
     </React.Fragment>
   );
 

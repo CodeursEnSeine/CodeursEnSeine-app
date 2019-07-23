@@ -1,21 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Layout from "../components/templates/Layout";
-import ConferenceHall from "../services/ConferenceHall";
 import Card from "../components/molecules/Card";
+import { useTalks } from "../hooks/useTalks";
 
 export default function Today() {
-  const [loading, setLoading] = useState(true);
-  const [talks, setTalks] = useState([]);
-
-  useEffect(() => {
-    async function fetchData() {
-      const data = await ConferenceHall.getData();
-      setTalks(data);
-      setLoading(false);
-    }
-
-    fetchData();
-  }, []);
+  const [talks, loading] = useTalks();
 
   return (
     <Layout loading={loading} title="Programme">

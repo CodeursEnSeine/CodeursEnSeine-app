@@ -17,7 +17,7 @@ const TalkDisplay = ({ talk }) => {
       {talk.room && <Badge>Salle {talk.room}</Badge>}
       {talk.level && <Badge>{talk.level}</Badge>}
       {talk.category && <Badge>{talk.category}</Badge>}
-      {talk.description && <Paragraph>{talk.description}</Paragraph>}
+      {talk.abstract && <Paragraph>{talk.abstract}</Paragraph>}
     </React.Fragment>
   );
 };
