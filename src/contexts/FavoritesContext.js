@@ -8,7 +8,7 @@ export const FavoritesContextProvider = ({ children }) => {
 
   useEffect(() => {
     setFavorites(Favorite.getFavorites());
-  });
+  }, [setFavorites]);
 
   const addFavorite = favorite => {
     Favorite.addFavorite(favorite);

@@ -7,6 +7,7 @@ import FAV from "../components/atoms/FAV";
 import Icon from "../components/atoms/Icon";
 import Favorite from "../services/Favorite";
 import { useTalks } from "../hooks/useTalks";
+import SpeakerDisplay from "../components/organisms/SpeakerDisplay";
 
 const propTypes = {
   match: PropTypes.object.isRequired
@@ -45,6 +46,10 @@ function Talk({ match }) {
   return (
     <Layout loading={loading} title={`${talk.formats} - ${talk.hour}`}>
       <TalkDisplay talk={talk} />
+      {talk.speakers &&
+        talk.speakers.map(speaker => (
+          <SpeakerDisplay key={speaker.id} speaker={speaker} />
+        ))}
       <FAV isFavorite={Favorite.isFavorite(talk.id)} onClick={toggleFavorite}>
         <Icon>favorite</Icon>
       </FAV>

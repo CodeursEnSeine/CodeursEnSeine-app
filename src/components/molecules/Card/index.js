@@ -18,6 +18,10 @@ const defaultProps = {
   as: "div"
 };
 
+const BadgeWithMargin = styled(Badge)`
+  margin: ${props => props.theme.spacing / 2}px;
+`;
+
 const DivIcon = styled(Icon)`
   margin: ${props => props.theme.spacing}px;
   color: ${props => props.theme.colors.secondary};
@@ -54,7 +58,7 @@ function Card({ as: Tag, conference, to, ...props }) {
     <Tag {...props}>
       {header}
       <CardFooter>
-        <Badge>Salle {conference.room}</Badge>
+        <BadgeWithMargin>Salle {conference.room}</BadgeWithMargin>
         {favorite ? (
           <FavoriteIcon
             onClick={() => {

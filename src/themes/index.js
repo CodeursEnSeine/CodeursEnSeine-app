@@ -6,6 +6,7 @@ export const CESTheme = {
     colorSelected: "#FFFFFF"
   },
   borderRadius: "4px",
+  backgroundImageLinear: "linear-gradient(to right top, #007DC5, #034EA2)",
   colors: {
     white: "#FFFFFF",
     favorite: "#E52158",
