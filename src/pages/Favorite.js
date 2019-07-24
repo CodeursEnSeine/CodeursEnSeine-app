@@ -9,7 +9,7 @@ export default function Favorite() {
 
   const favoritesContext = useContext(FavoritesContext);
 
-  if (favoritesContext.state.favorites.length === 0) {
+  if (favoritesContext.favorites.length === 0) {
     return (
       <Layout title="Favoris">
         <p>Pas de conférences dans vos favoris pour le moment.</p>
@@ -28,7 +28,7 @@ export default function Favorite() {
       ) : (
         talks.map(
           talk =>
-            favoritesContext.state.favorites.includes(talk.id) && (
+            favoritesContext.favorites.includes(talk.id) && (
               <Card key={talk.id} to={`/talks/${talk.id}`} conference={talk} />
             )
         )

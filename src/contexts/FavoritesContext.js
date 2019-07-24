@@ -1,45 +1,36 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Favorite from "../services/Favorite";
 
 export const FavoritesContext = React.createContext();
 
-export class FavoritesContextProvider extends React.Component {
-  state = {
-    favorites: []
-  };
+export const FavoritesContextProvider = ({ children }) => {
+  const [favorites, setFavorites] = useState([]);
 
-  componentDidMount() {
-    this.updateFavorite();
-  }
+  useEffect(() => {
+    setFavorites(Favorite.getFavorites());
+  });
 
-  updateFavorite = () => {
-    const favorites = Favorite.getFavorites();
-    this.setState({ favorites });
-  };
-
-  addFavorite = favorite => {
+  const addFavorite = favorite => {
     Favorite.addFavorite(favorite);
 
-    this.updateFavorite();
+    setFavorites(Favorite.getFavorites());
   };
 
-  removeFavorite = favorite => {
+  const removeFavorite = favorite => {
     Favorite.removeFavorite(favorite);
 
-    this.updateFavorite();
+    setFavorites(Favorite.getFavorites());
   };
 
-  render() {
-    return (
-      <FavoritesContext.Provider
-        value={{
-          state: this.state,
-          addFavorite: this.addFavorite,
-          removeFavorite: this.removeFavorite
-        }}
-      >
-        {this.props.children}
-      </FavoritesContext.Provider>
-    );
-  }
-}
+  return (
+    <FavoritesContext.Provider
+      value={{
+        favorites,
+        addFavorite,
+        removeFavorite
+      }}
+    >
+      {children}
+    </FavoritesContext.Provider>
+  );
+};
