@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import Badge from "../../atoms/Badge";
 import Paragraph from "../../atoms/Paragraph";
@@ -14,14 +14,19 @@ const StyledBadge = styled(Badge)`
 `;
 
 const SpeakerDisplay = ({ speaker }) => {
+  const [showAvatar, setShowAvatar] = useState(true);
+
   return (
     <React.Fragment>
       <div style={{ display: "flex" }}>
-        <img
-          style={{ flexBasis: "25%" }}
-          src={speaker.photoURL}
-          alt={speaker.displayName}
-        />
+        {showAvatar && (
+          <img
+            style={{ flexBasis: "25%" }}
+            src={speaker.photoURL}
+            alt={speaker.displayName}
+            onError={() => setShowAvatar(false)}
+          />
+        )}
         <div>
           <Header>{speaker.displayName}</Header>
           {speaker.company && <SubHeader>{speaker.company}</SubHeader>}
