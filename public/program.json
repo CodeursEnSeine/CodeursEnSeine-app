@@ -1,9 +1,45 @@
 {
   "talks": [
+    {
+      "id": "pleniere",
+      "title": "Plénière d'accueil",
+      "abstract": "L'équipe de Codeurs en Seine",
+      "state": "event",
+      "hour": "8:45",
+      "room": "A"
+    },
+    {
+      "id": "pause1",
+      "title": "Pause",
+      "abstract": "Boire un coup, papoter, visiter les stands ;)",
+      "state": "event",
+      "hour": "9:40"
+    },
+    {
+      "id": "repas",
+      "title": "Repas",
+      "abstract": "Miam miam, papoter, visiter les stands ;)",
+      "state": "event",
+      "hour": "12:15"
+    },
+    {
+      "id": "pause2",
+      "title": "Pause",
+      "abstract": "Boire un coup, papoter, visiter les stands ;)",
+      "state": "event",
+      "hour": "15:20"
+    },
+    {
+      "id": "cloture",
+      "title": "Plénière de Cloture - Surprise !",
+      "abstract": "L'équipe de Codeurs en Seine",
+      "state": "event",
+      "hour": "17:30"
+    },
     { "id": "5Yqtg0FOby8t9XOKX4on", "room": "A", "hour": "9:00" },
     { "id": "DGGaW2gt47pxXgq9BZaM", "room": "A", "hour": "10:00" },
     { "id": "Da5VXCk07XgyvBspQWWx", "room": "B", "hour": "10:00" },
-    { "id": "JiWBMLXkkAIxZNGDTbA7", "room": "C", "hour": "23:00" },
-    { "id": "VrY7HFeXxyoqtBpH0rZM", "room": "D", "hour": "24:00" }
+    { "id": "JiWBMLXkkAIxZNGDTbA7", "room": "C", "hour": "10:45" },
+    { "id": "VrY7HFeXxyoqtBpH0rZM", "room": "D", "hour": "10:45" }
   ]
 }

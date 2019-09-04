@@ -35,9 +35,10 @@ const FavoriteIcon = styled(DivIcon)`
 function Card({ as: Tag, conference, to, ...props }) {
   const favoritesContext = useContext(FavoritesContext);
 
+  // Check if conference as a speakers key. If not, set speakers to null.
   const speakers = conference.speakers
-    .map(speaker => speaker.displayName)
-    .join(" • ");
+    ? conference.speakers.map(speaker => speaker.displayName).join(" • ")
+    : null;
 
   let header = (
     <React.Fragment>

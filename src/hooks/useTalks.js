@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useLoader } from "./useLoader";
 import ConferenceHall from "../services/ConferenceHall";
 import TalkModel, { Speaker } from "../classes/TalkModel";
+import EventModel from "../classes/EventModel";
 
 const LOCAL_STORAGE_TALKS_KEY = "ces-2019-talks";
 
@@ -37,6 +38,22 @@ function filterSelectedTalks(program, conferenceHall) {
     });
   });
 
+  program.talks.forEach(t => {
+    console.log(t.state);
+    if (t.state === "event") {
+      const event = new EventModel(
+        t.id,
+        t.title,
+        t.state,
+        t.abstract,
+        t.room,
+        t.hour
+      );
+
+      selectedTalks.push(event);
+    }
+  });
+
   return selectedTalks;
 }
 
@@ -57,14 +74,15 @@ export const useTalks = () => {
       setLoading(false);
     }
 
-    const selectedTalks = localStorage.getItem(LOCAL_STORAGE_TALKS_KEY);
+    // const selectedTalks = localStorage.getItem(LOCAL_STORAGE_TALKS_KEY);
 
-    if (selectedTalks === null || selectedTalks === "") {
-      fetchData();
-    } else {
-      setTalks(JSON.parse(selectedTalks));
-      setLoading(false);
-    }
+    // if (selectedTalks === null || selectedTalks === "") {
+    //   fetchData();
+    // } else {
+    //   setTalks(JSON.parse(selectedTalks));
+    //   setLoading(false);
+    // }
+    fetchData();
   }, [setTalks, setLoading]);
 
   return [talks, loading, Loader];
