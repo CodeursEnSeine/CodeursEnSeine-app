@@ -34,21 +34,26 @@ export default function Favorite() {
         <Fragment>
           {Object.keys(talksGroupedByHour)
             .sort(sortHours)
-            .map(hour => (
-              <Fragment key={hour}>
-                <Hour>{hour}</Hour>
-                {talksGroupedByHour[hour].map(
-                  talk =>
-                    favorites.includes(talk.id) && (
-                      <Card
-                        key={talk.id}
-                        to={`/talks/${talk.id}`}
-                        conference={talk}
-                      />
-                    )
-                )}
-              </Fragment>
-            ))}
+            .map(
+              hour =>
+                talksGroupedByHour[hour].some(talk =>
+                  favorites.includes(talk.id)
+                ) && (
+                  <Fragment key={hour}>
+                    <Hour>{hour}</Hour>
+                    {talksGroupedByHour[hour].map(
+                      talk =>
+                        favorites.includes(talk.id) && (
+                          <Card
+                            key={talk.id}
+                            to={`/talks/${talk.id}`}
+                            conference={talk}
+                          />
+                        )
+                    )}
+                  </Fragment>
+                )
+            )}
         </Fragment>
       )}
     </Layout>
