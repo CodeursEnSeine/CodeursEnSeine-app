@@ -1,3 +1,11 @@
+# Application Programme Codeurs En Seine (PWA)
+
+## To deploy the app on Github pages
+
+`yarn run deploy`
+
+## React instructions
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
