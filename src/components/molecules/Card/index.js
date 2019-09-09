@@ -18,6 +18,10 @@ const defaultProps = {
   as: "div"
 };
 
+const BadgeWithMargin = styled(Badge)`
+  margin: ${props => props.theme.spacing / 2}px;
+`;
+
 const DivIcon = styled(Icon)`
   margin: ${props => props.theme.spacing}px;
   color: ${props => props.theme.colors.secondary};
@@ -31,9 +35,10 @@ const FavoriteIcon = styled(DivIcon)`
 function Card({ as: Tag, conference, to, ...props }) {
   const favoritesContext = useContext(FavoritesContext);
 
+  // Check if conference as a speakers key. If not, set speakers to null.
   const speakers = conference.speakers
-    .map(speaker => speaker.displayName)
-    .join(" • ");
+    ? conference.speakers.map(speaker => speaker.displayName).join(" • ")
+    : null;
 
   let header = (
     <React.Fragment>
@@ -54,7 +59,7 @@ function Card({ as: Tag, conference, to, ...props }) {
     <Tag {...props}>
       {header}
       <CardFooter>
-        <Badge>Salle {conference.room}</Badge>
+        <BadgeWithMargin>Salle {conference.room}</BadgeWithMargin>
         {favorite ? (
           <FavoriteIcon
             onClick={() => {

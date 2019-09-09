@@ -1,12 +1,13 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import Layout from "../components/templates/Layout";
-import { FavoritesContext } from "../contexts/FavoritesContext";
+import { useFavoriteContext } from "../contexts/FavoritesContext";
 import TalkDisplay from "../components/organisms/TalkDisplay";
 import FAV from "../components/atoms/FAV";
 import Icon from "../components/atoms/Icon";
 import Favorite from "../services/Favorite";
 import { useTalks } from "../hooks/useTalks";
+import SpeakerDisplay from "../components/organisms/SpeakerDisplay";
 
 const propTypes = {
   match: PropTypes.object.isRequired
@@ -19,7 +20,7 @@ const defaultProps = {
 function Talk({ match }) {
   const [talk, setTalk] = useState({});
   const [loading, setLoading] = useState(true);
-  const favoritesContext = useContext(FavoritesContext);
+  const { removeFavorite, addFavorite } = useFavoriteContext();
   const [talks, ,] = useTalks();
 
   useEffect(() => {
@@ -36,15 +37,19 @@ function Talk({ match }) {
 
   const toggleFavorite = () => {
     if (Favorite.isFavorite(talk.id)) {
-      favoritesContext.removeFavorite(talk.id);
+      removeFavorite(talk.id);
     } else {
-      favoritesContext.addFavorite(talk.id);
+      addFavorite(talk.id);
     }
   };
 
   return (
     <Layout loading={loading} title={`${talk.formats} - ${talk.hour}`}>
       <TalkDisplay talk={talk} />
+      {talk.speakers &&
+        talk.speakers.map(speaker => (
+          <SpeakerDisplay key={speaker.id} speaker={speaker} />
+        ))}
       <FAV isFavorite={Favorite.isFavorite(talk.id)} onClick={toggleFavorite}>
         <Icon>favorite</Icon>
       </FAV>

@@ -6,6 +6,7 @@ export const CESTheme = {
     colorSelected: "#FFFFFF"
   },
   borderRadius: "4px",
+  backgroundImageLinear: "linear-gradient(to right top, #007DC5, #034EA2)",
   colors: {
     white: "#FFFFFF",
     favorite: "#E52158",
@@ -22,6 +23,11 @@ export const CESTheme = {
   card: {
     boxShadow: "0px 0px 20px rgba(0, 102, 179, 0.2)",
     borderRadius: "4px"
+  },
+  greyCard: {
+    backgroundColor: "rgb(247, 250, 252)",
+    borderRadius: "4px",
+    border: "1px solid rgba(0,102,179,0.1)"
   },
   favorite: {
     color: "#E52158",
