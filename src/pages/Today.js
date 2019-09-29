@@ -12,8 +12,6 @@ export default function Today() {
 
   const talksGroupedByHour = groupBy(talks, "hour");
 
-  console.log(talksGroupedByHour);
-
   return (
     <Layout loading={loading} title="Programme">
       {Object.keys(talksGroupedByHour)
@@ -21,17 +19,19 @@ export default function Today() {
         .map(hour => (
           <Fragment key={hour}>
             <Hour>{hour}</Hour>
-            {talksGroupedByHour[hour].map(talk =>
-              talk.state === "event" ? (
-                <GreyCard key={talk.id} conference={talk} />
-              ) : (
-                <Card
-                  key={talk.id}
-                  to={`/talks/${talk.id}`}
-                  conference={talk}
-                />
-              )
-            )}
+            {talksGroupedByHour[hour]
+              .sort((a, b) => a.room.localeCompare(b.room))
+              .map(talk =>
+                talk.state === "event" ? (
+                  <GreyCard key={talk.id} conference={talk} />
+                ) : (
+                  <Card
+                    key={talk.id}
+                    to={`/talks/${talk.id}`}
+                    conference={talk}
+                  />
+                )
+              )}
           </Fragment>
         ))}
     </Layout>

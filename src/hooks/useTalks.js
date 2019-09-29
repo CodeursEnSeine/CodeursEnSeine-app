@@ -9,6 +9,7 @@ const LOCAL_STORAGE_TALKS_KEY = "ces-2019-talks";
 function filterSelectedTalks(program, conferenceHall) {
   const selectedTalks = [];
 
+  // Logic for conference hall talks
   conferenceHall.talks.forEach(talk => {
     program.talks.forEach(t => {
       if (talk.id === t.id) {
@@ -38,8 +39,8 @@ function filterSelectedTalks(program, conferenceHall) {
     });
   });
 
+  // Logic for special events
   program.talks.forEach(t => {
-    console.log(t.state);
     if (t.state === "event") {
       const event = new EventModel(
         t.id,
@@ -51,6 +52,14 @@ function filterSelectedTalks(program, conferenceHall) {
       );
 
       selectedTalks.push(event);
+    }
+  });
+
+  // Logic for sponsors and keynotes
+  program.talks.forEach(t => {
+    if (t.state === "sponsors" || t.state === "keynotes") {
+      const special = Object.assign({}, t);
+      selectedTalks.push(special);
     }
   });
 
