@@ -1,6 +1,6 @@
 import React from "react";
 import { ThemeProvider } from "styled-components";
-import { HashRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import BottomNavigation from "./components/organisms/BottomNavigation";
 import Favorite from "./pages/Favorite";
 import Today from "./pages/Today";
@@ -14,7 +14,7 @@ function App() {
     <React.StrictMode>
       <ThemeProvider theme={CESTheme}>
         <FavoritesContextProvider>
-          <Router basename="/">
+          <Router>
             <Route exact path="/" component={Today} />
             <Route path="/favorite" component={Favorite} />
             <Route path="/map" component={Map} />
