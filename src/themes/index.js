@@ -24,6 +24,11 @@ export const CESTheme = {
     boxShadow: "0px 0px 20px rgba(0, 102, 179, 0.2)",
     borderRadius: "4px"
   },
+  greyCard: {
+    backgroundColor: "rgb(247, 250, 252)",
+    borderRadius: "4px",
+    border: "1px solid rgba(0,102,179,0.1)"
+  },
   favorite: {
     color: "#E52158",
     boxShadow: "0px 0px 20px rgba(229, 33, 88, 0.3)"

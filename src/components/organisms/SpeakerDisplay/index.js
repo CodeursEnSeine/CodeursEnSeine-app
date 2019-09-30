@@ -21,7 +21,7 @@ const SpeakerDisplay = ({ speaker }) => {
       <div style={{ display: "flex" }}>
         {showAvatar && (
           <img
-            style={{ flexBasis: "25%" }}
+            width={100}
             src={speaker.photoURL}
             alt={speaker.displayName}
             onError={() => setShowAvatar(false)}

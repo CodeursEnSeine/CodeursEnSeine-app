@@ -1,9 +1,102 @@
 {
   "talks": [
-    { "id": "5Yqtg0FOby8t9XOKX4on", "room": "A", "hour": "9h00" },
-    { "id": "DGGaW2gt47pxXgq9BZaM", "room": "A", "hour": "10h00" },
-    { "id": "Da5VXCk07XgyvBspQWWx", "room": "B", "hour": "10h00" },
-    { "id": "JiWBMLXkkAIxZNGDTbA7", "room": "C", "hour": "10h00" },
-    { "id": "VrY7HFeXxyoqtBpH0rZM", "room": "D", "hour": "10h00" }
+    {
+      "id": "pleniere",
+      "title": "Plénière d'accueil",
+      "abstract": "L'équipe de Codeurs en Seine",
+      "state": "event",
+      "hour": "8:45",
+      "room": "A"
+    },
+    {
+      "id": "keynote-matin",
+      "title": "Le pouvoir du simple",
+      "abstract": "Beaucoup parlent de la fameuse règle du KISS (Keep it Simple and Stupid). Et c’est dommage. Car simplifier quelque chose est bien loin de le rendre stupide. Comment expliquer la Blockchain, la fusion nucléaire ou le principe de résistance électrique en série à des enfants de 6 ans ? Dans un monde d’experts, de buzz words et de corporate bullshit, il est peut-être temps de revenir à l’essentiel, et d’oser simplifier. Cela ne peut que nous rendre plus efficace.",
+      "speakers": [
+        {
+          "id": "thierry_croix",
+          "displayName": "Thierry Croix",
+          "photoURL": "./images/speakers/thierry-croix.png",
+          "company": "Go to Next Levels",
+          "twitter": "thierrycrx",
+          "github": "",
+          "bio": "Thierry est Storyteller & Simplifyer, Podcaster, Partner chez Go 2 Next Levels, co-fondateur de The BigStache Room et de 13Wolves. Il est aussi comédien de théâtre et d’improvisation depuis plus de 10 ans. Il déteste la choucroute et les huitres, sent le vieux poney au réveil, et a décidé d’être confortable plutôt que sexy. Et puis surtout, il trouve que celui qui a écrit ces fameuses lignes dans Batman « Bruce, pourquoi tombe-t-on ? » n’a de toute évidence jamais essayé d’avoir une conversation philosophique avec un gosse qui vient de se casser le bras. Quant à sa devise, elle est simple: « Personne ne fera les choses à ta place. Alors si tu veux réussir, bouge toi le cul ! »."
+        }
+      ],
+      "state": "keynotes",
+      "hour": "9:00",
+      "room": "A",
+      "formats": "Keynote"
+    },
+    {
+      "id": "pause1",
+      "title": "Pause",
+      "abstract": "Boire un coup, papoter, visiter les stands ;)",
+      "state": "event",
+      "hour": "9:40"
+    },
+    {
+      "id": "repas",
+      "title": "Repas",
+      "abstract": "Miam miam, papoter, visiter les stands ;)",
+      "state": "event",
+      "hour": "12:15"
+    },
+    {
+      "id": "pause2",
+      "title": "Pause",
+      "abstract": "Boire un coup, papoter, visiter les stands ;)",
+      "state": "event",
+      "hour": "15:20"
+    },
+    {
+      "id": "cloture",
+      "title": "Plénière de Cloture - Surprise !",
+      "abstract": "L'équipe de Codeurs en Seine",
+      "state": "event",
+      "hour": "17:30"
+    },
+    { "id": "KkMo11sOgeSH9EzqwoVQ", "room": "A", "hour": "10:00" },
+    { "id": "R9O1S7M9oRMmwd0cNBaz", "room": "B", "hour": "10:00" },
+    { "id": "IV602d8TyliA6EGSV3a3", "room": "C", "hour": "10:00" },
+    { "id": "GFl8SnkquoKd5AGWPCgu", "room": "D", "hour": "10:00" },
+    { "id": "r5KVofSMuXr5Iv9Arqmh", "room": "A", "hour": "11:00" },
+    { "id": "HliAloeXaKU6f3IGy9iB", "room": "B", "hour": "11:00" },
+    { "id": "XvpmnMltEJ6PNv0LBf4e", "room": "C", "hour": "11:00" },
+    { "id": "Sezi1qgi6hT4LYG38UVS", "room": "D", "hour": "11:00" },
+    { "id": "CNiMfDqXPl1ST0WCNabT", "room": "A", "hour": "12:00" },
+    { "id": "Rr8T3DgvWfZmPKPcijfX", "room": "B", "hour": "12:00" },
+    { "id": "xSUlYy6soA37mp6AKQNG", "room": "C", "hour": "12:00" },
+    {
+      "id": "sponsors",
+      "title": "Sponsors",
+      "abstract": "Matmut",
+      "room": "D",
+      "state": "sponsors",
+      "hour": "12:00"
+    },
+    {
+      "id": "sponsors2",
+      "title": "Sponsors",
+      "abstract": "Sopra",
+      "room": "A",
+      "state": "sponsors",
+      "hour": "14:10"
+    },
+    { "id": "OSeRNhvgAv183XS9gPAA", "room": "B", "hour": "14:10" },
+    { "id": "LoHv3uRAMoOW0po8boZF", "room": "C", "hour": "14:10" },
+    { "id": "tYSdKQvuEtgH7nLokY0e", "room": "D", "hour": "14:10" },
+    { "id": "lVGzSfeR3aKEFVb7GPqe", "room": "A", "hour": "14:30" },
+    { "id": "L7wGcba1eGaOagSZrlf1", "room": "B", "hour": "14:30" },
+    { "id": "541nPsSDD5Ea2WiR2nkM", "room": "C", "hour": "14:30" },
+    { "id": "Tip6P4wzn78kIJA0v95D", "room": "D", "hour": "14:30" },
+    { "id": "N2XmjJJkwUASIHLHtoTR", "room": "A", "hour": "15:40" },
+    { "id": "7c8PP1lBaglzU3AwCkqB", "room": "B", "hour": "15:40" },
+    { "id": "9UKGzjZ3bYCcoZtso63N", "room": "C", "hour": "15:40" },
+    { "id": "smPOMJiKpyDx0Mi9TbwH", "room": "D", "hour": "15:40" },
+    { "id": "XJtYkW6itYxC1qsLGtbr", "room": "A", "hour": "16:40" },
+    { "id": "ZKVz0OFf19i9AwN2GFq7", "room": "B", "hour": "16:40" },
+    { "id": "11m1hi3u0VMSmuA5Zgfz", "room": "C", "hour": "16:40" },
+    { "id": "EOC8wmqvMNxiCpE6Xse8", "room": "D", "hour": "16:40" }
   ]
 }

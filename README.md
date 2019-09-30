@@ -1,3 +1,17 @@
+# Application Programme Codeurs En Seine (PWA)
+
+## To deploy the app on Clever Cloud instance (PROD)
+
+`git remote add clever git+ssh://git@push-par-clevercloud-customers.services.clever-cloud.com/app_2236f2d1-e065-4034-817f-284bd1c76a42.git`
+
+`git push -u clever master`
+
+## To deploy the app on Github pages (DEV)
+
+`yarn run deploy`
+
+## React instructions
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

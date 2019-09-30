@@ -1,7 +1,7 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import Layout from "../components/templates/Layout";
-import { FavoritesContext } from "../contexts/FavoritesContext";
+import { useFavoriteContext } from "../contexts/FavoritesContext";
 import TalkDisplay from "../components/organisms/TalkDisplay";
 import FAV from "../components/atoms/FAV";
 import Icon from "../components/atoms/Icon";
@@ -20,7 +20,7 @@ const defaultProps = {
 function Talk({ match }) {
   const [talk, setTalk] = useState({});
   const [loading, setLoading] = useState(true);
-  const favoritesContext = useContext(FavoritesContext);
+  const { removeFavorite, addFavorite } = useFavoriteContext();
   const [talks, ,] = useTalks();
 
   useEffect(() => {
@@ -37,9 +37,9 @@ function Talk({ match }) {
 
   const toggleFavorite = () => {
     if (Favorite.isFavorite(talk.id)) {
-      favoritesContext.removeFavorite(talk.id);
+      removeFavorite(talk.id);
     } else {
-      favoritesContext.addFavorite(talk.id);
+      addFavorite(talk.id);
     }
   };
 

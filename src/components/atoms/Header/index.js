@@ -7,4 +7,5 @@ export default styled.h2`
   font-weight: normal;
   margin: ${props => props.theme.spacing}px;
   margin-bottom: ${props => props.theme.spacing * 2}px;
+  text-transform: capitalize;
 `;
