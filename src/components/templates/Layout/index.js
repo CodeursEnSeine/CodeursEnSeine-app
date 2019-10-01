@@ -4,11 +4,6 @@ import styled from "styled-components";
 import Header from "../../atoms/Header";
 import Loader from "../../atoms/Loader";
 
-const StyledSection = styled.section`
-  margin: 8px;
-  margin-bottom: 56px;
-`;
-
 const propTypes = {
   title: PropTypes.string,
   loading: PropTypes.bool.isRequired
@@ -17,6 +12,11 @@ const propTypes = {
 const defaultProps = {
   loading: false
 };
+
+const StyledSection = styled.section`
+  margin: 8px;
+  margin-bottom: 56px;
+`;
 
 export default function Layout({ children, title, loading }) {
   if (loading) {

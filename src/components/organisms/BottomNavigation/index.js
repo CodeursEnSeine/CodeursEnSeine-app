@@ -24,9 +24,6 @@ function BottomNavigation({ children, as: Element, ...props }) {
       <BottomNavigationAction to="/map" icon="location_on">
         Plan
       </BottomNavigationAction>
-      <div>
-        Hosted on <a href="https://www.clever-cloud.com">Clever Cloud</a>
-      </div>
     </Element>
   );
 }
