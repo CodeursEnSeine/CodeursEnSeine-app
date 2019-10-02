@@ -9,7 +9,7 @@ import Hour from "../components/atoms/Hour";
 import { sortHours } from "../helpers/sortHours";
 
 export default function Favorite() {
-  const [talks, loading, Loader] = useTalks();
+  const [talks, loading] = useTalks();
 
   const favoritesContext = useContext(FavoritesContext);
 
@@ -27,21 +27,22 @@ export default function Favorite() {
   const talksGroupedByHour = groupBy(talks, "hour");
 
   return (
-    <Layout title="Favoris">
-      {loading ? (
-        <Loader />
-      ) : (
-        <Fragment>
-          {Object.keys(talksGroupedByHour)
-            .sort(sortHours)
-            .map(
-              hour =>
-                talksGroupedByHour[hour].some(talk =>
-                  favorites.includes(talk.id)
-                ) && (
-                  <Fragment key={hour}>
-                    <Hour>{hour}</Hour>
-                    {talksGroupedByHour[hour].map(
+    <Layout title="Favoris" loading={loading}>
+      <>
+        {Object.keys(talksGroupedByHour)
+          .sort(sortHours)
+          .map(
+            hour =>
+              talksGroupedByHour[hour].some(talk =>
+                favorites.includes(talk.id)
+              ) && (
+                <Fragment key={hour}>
+                  <Hour>
+                    {hour}
+                  </Hour>
+                  {talksGroupedByHour[hour]
+                    .sort((a, b) => a.room.localeCompare(b.room))
+                    .map(
                       talk =>
                         favorites.includes(talk.id) && (
                           <Card
@@ -49,13 +50,13 @@ export default function Favorite() {
                             to={`/talks/${talk.id}`}
                             conference={talk}
                           />
-                        )
-                    )}
-                  </Fragment>
-                )
-            )}
-        </Fragment>
-      )}
+                    )
+                  )}
+                </Fragment>
+              )
+          )
+        }
+      </>
     </Layout>
   );
 }

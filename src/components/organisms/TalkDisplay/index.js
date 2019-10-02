@@ -1,9 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import marked from "marked";
-import TalkHeader from "../../atoms/TalkHeader";
-import Badge from "../../atoms/Badge";
-import Paragraph from "../../atoms/Paragraph";
+import { Box, Stack, Heading, Badge, Text } from "@chakra-ui/core";
 
 const propTypes = {
   talk: PropTypes.object.isRequired
@@ -12,18 +10,38 @@ const propTypes = {
 const defaultProps = {};
 
 const TalkDisplay = ({ talk }) => {
+  const typeAndHour = () => {
+    if (talk.formats) {
+      return `${talk.formats} - ${talk.hour}`;
+    }
+
+    return talk.hour;
+  };
+
   return (
-    <React.Fragment>
-      <TalkHeader>{talk.title}</TalkHeader>
-      {talk.room && <Badge>Salle {talk.room}</Badge>}
-      {talk.level && <Badge>{talk.level}</Badge>}
-      {talk.category && <Badge>{talk.category}</Badge>}
+    <Box mb="4">
+      <Box
+        mb="4"
+      >
+        <Heading
+          as="h4"
+          fontSize="md"
+          mb="1"
+        >
+          {typeAndHour()}
+        </Heading>
+        <Stack isInline>
+          {!!talk.room && <Badge variantColor="brand">Salle {talk.room}</Badge>}
+          {!!talk.level && <Badge>{talk.level}</Badge>}
+        </Stack>
+      </Box>
+
       {talk.abstract && (
-        <Paragraph
+        <Text
           dangerouslySetInnerHTML={{ __html: marked(talk.abstract || "") }}
         />
       )}
-    </React.Fragment>
+    </Box>
   );
 };
 

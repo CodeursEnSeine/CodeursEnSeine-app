@@ -1,93 +1,77 @@
-import React, { useContext } from "react";
-import PropTypes from "prop-types";
-import styled from "styled-components";
-import CardTitle from "../../atoms/CardTitle";
-import CardSubTitle from "../../atoms/CardSubTitle";
-import CardFooter from "../../atoms/CardFooter";
-import Badge from "../../atoms/Badge";
-import Link from "../../atoms/Link";
-import Icon from "../../atoms/Icon";
-import Favorite from "../../../services/Favorite";
-import { FavoritesContext } from "../../../contexts/FavoritesContext";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import {
+  Box,
+  Heading,
+  Text,
+  Badge,
+} from '@chakra-ui/core';
+import FAV from '../../atoms/FAV';
 
-const propTypes = {
-  as: PropTypes.string
-};
+const propTypes = {};
+const defaultProps = {};
 
-const defaultProps = {
-  as: "div"
-};
-
-const BadgeWithMargin = styled(Badge)`
-  margin: ${props => props.theme.spacing / 2}px;
-`;
-
-const DivIcon = styled(Icon)`
-  margin: ${props => props.theme.spacing}px;
-  color: ${props => props.theme.colors.secondary};
-  cursor: pointer;
-`;
-
-const FavoriteIcon = styled(DivIcon)`
-  color: ${props => props.theme.colors.favorite};
-`;
-
-function Card({ as: Tag, conference, to, ...props }) {
-  const favoritesContext = useContext(FavoritesContext);
-
+const Card = ({ conference, to, ...props }) => {
   // Check if conference as a speakers key. If not, set speakers to null.
   const speakers = conference.speakers
-    ? conference.speakers.map(speaker => speaker.displayName).join(" • ")
+    ? conference.speakers.map(speaker => speaker.displayName).join(' • ')
     : null;
 
-  let header = (
-    <React.Fragment>
-      <CardTitle>{conference.title}</CardTitle>
-      <CardSubTitle>
-        <span>{speakers}</span>
-      </CardSubTitle>
-    </React.Fragment>
-  );
-
-  if (to) {
-    header = <Link to={to}>{header}</Link>;
-  }
-
-  const favorite = Favorite.isFavorite(conference.id);
+  const isTalk = !!to;
 
   return (
-    <Tag {...props}>
-      {header}
-      <CardFooter>
-        <BadgeWithMargin>Salle {conference.room}</BadgeWithMargin>
-        {favorite ? (
-          <FavoriteIcon
-            onClick={() => {
-              favoritesContext.removeFavorite(conference.id);
-            }}
-          >
-            favorite
-          </FavoriteIcon>
-        ) : (
-          <DivIcon
-            onClick={() => {
-              favoritesContext.addFavorite(conference.id);
-            }}
-          >
-            favorite_border
-          </DivIcon>
+    <Box position="relative">
+      <Box
+        as={to ? Link : 'div'}
+        to={to}
+        d="block"
+        boxShadow={isTalk ? 'paper' : null}
+        borderRadius="md"
+        borderLeft={isTalk ? '4px solid' : null}
+        borderColor={isTalk ? 'brand.900' : 'gray.300'}
+        borderWidth={isTalk ? null : '1px'}
+        backgroundColor={isTalk ? 'white' : 'gray.100'}
+        py="2"
+        px="3"
+        mb="4"
+        {...props}
+      >
+        <Heading
+          as="h5"
+          fontSize="md"
+          fontWeight="semibold"
+          mb="1"
+        >
+          {conference.title}
+        </Heading>
+        <Text
+          fontSize="xs"
+          color="gray.500"
+          fontWeight="semibold"
+          mb="1"
+        >
+          {speakers}
+        </Text>
+        {!!conference.room && (
+          <Badge variantColor="brand">
+            Salle {conference.room}
+          </Badge>
         )}
-      </CardFooter>
-    </Tag>
+      </Box>
+      {isTalk && (
+        <FAV
+          talk={conference}
+          position="absolute"
+          bottom="1"
+          right="1"
+          size="sm"
+        />
+      )}
+    </Box>
   );
 }
 
-export default styled(Card)`
-  box-shadow: ${props => props.theme.card.boxShadow};
-  border-top: 4px solid ${props => props.theme.colors.secondary};
-  border-radius: ${props => props.theme.card.borderRadius};
-  margin-top: ${props => props.theme.spacing}px;
-`;
-
 Card.propTypes = propTypes;
 Card.defaultProps = defaultProps;
+
+export default Card;

@@ -1,20 +1,34 @@
-import styled from "styled-components";
+import React, { useContext } from 'react';
+import { IconButton } from '@chakra-ui/core';
+import { MdFavorite } from 'react-icons/md';
+import { FavoritesContext } from '../../../contexts/FavoritesContext';
+import Favorite from '../../../services/Favorite';
 
-export default styled.button`
-  background-color: ${props =>
-    props.isFavorite
-      ? props.theme.colors.favorite
-      : props.theme.colors.secondary};
-  color: ${props => props.theme.colors.white};
-  width: ${props => props.theme.spacing * 7}px;
-  height: ${props => props.theme.spacing * 7}px;
-  border: none;
-  border-radius: 100%;
-  position: fixed;
-  bottom: ${props => props.theme.spacing * 9}px;
-  right: ${props => props.theme.spacing * 2}px;
-  box-shadow: ${props =>
-    props.isFavorite
-      ? props.theme.favorite.boxShadow
-      : props.theme.card.boxShadow};
-`;
+const propTypes = {};
+const defaultProps = {};
+
+const FAV = ({ talk, ...props }) => {
+  const { addFavorite, removeFavorite } = useContext(FavoritesContext);
+  const isFavorite = Favorite.isFavorite(talk.id);
+
+  return (
+    <IconButton
+      isRound
+      variantColor={isFavorite ? 'pink' : 'gray'}
+      icon={MdFavorite}
+      onClick={() => {
+        if (isFavorite) {
+          removeFavorite(talk.id);
+        } else {
+          addFavorite(talk.id);
+        }
+      }}
+      {...props}
+    />
+  );
+};
+
+FAV.propTypes = propTypes;
+FAV.defaultProps = defaultProps;
+
+export default FAV;

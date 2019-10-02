@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { useLoader } from "./useLoader";
 import ConferenceHall from "../services/ConferenceHall";
 import TalkModel, { Speaker } from "../classes/TalkModel";
 import EventModel from "../classes/EventModel";
@@ -68,7 +67,7 @@ function filterSelectedTalks(program, conferenceHall) {
 
 export const useTalks = () => {
   const [talks, setTalks] = useState([]);
-  const [loading, setLoading, Loader] = useLoader();
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     async function fetchData() {
@@ -94,5 +93,5 @@ export const useTalks = () => {
     fetchData();
   }, [setTalks, setLoading]);
 
-  return [talks, loading, Loader];
+  return [talks, loading];
 };
