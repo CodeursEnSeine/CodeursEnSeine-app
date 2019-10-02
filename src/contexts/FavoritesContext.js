@@ -29,7 +29,6 @@ export const FavoritesContextProvider = ({ children }) => {
               return [];
             }
           })();
-          console.log({ notified });
 
           /** @type {Array} */
           const favoriteTalks = talks
@@ -39,8 +38,6 @@ export const FavoritesContextProvider = ({ children }) => {
               (talk1, talk2) =>
                 talk1.hour.split(":")[0] - talk2.hour.split(":")[0]
             );
-
-          console.log(favoriteTalks);
 
           const nextTalk = favoriteTalks.shift();
 

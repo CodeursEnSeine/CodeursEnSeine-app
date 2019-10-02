@@ -17,9 +17,9 @@ function filterSelectedTalks(program, conferenceHall) {
           .filter(speaker => talk.speakers.includes(speaker.uid))
           .map(speaker => new Speaker(speaker));
 
-        const talkFormats = conferenceHall.formats
+        const talkFormat = conferenceHall.formats
           .filter(format => format.id === talk.formats)
-          .map(format => format.name);
+          .map(format => format.name)[0];
 
         const formattedTalk = new TalkModel(
           talk.id,
@@ -28,7 +28,7 @@ function filterSelectedTalks(program, conferenceHall) {
           talk.level,
           talk.abstract,
           talk.categories,
-          talkFormats,
+          talkFormat || t.formats,
           talkSpeakers,
           talk.comments,
           t.room,

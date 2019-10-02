@@ -1,3 +1,5 @@
+const FAVORITE_KEY = "ces-favorite-2019";
+
 export default class Favorite {
   /**
    * Get the favorites stored in local storage
@@ -5,7 +7,7 @@ export default class Favorite {
    * @returns {Array<String>}
    */
   static getFavorites = () => {
-    const favorites = localStorage.getItem("ces-favorite");
+    const favorites = localStorage.getItem(FAVORITE_KEY);
 
     if (favorites) {
       return JSON.parse(favorites);
@@ -20,7 +22,7 @@ export default class Favorite {
    * @param {Array<string>} favorites The list of favorites to save.
    */
   static setFavorites = favorites => {
-    localStorage.setItem("ces-favorite", JSON.stringify(favorites));
+    localStorage.setItem(FAVORITE_KEY, JSON.stringify(favorites));
   };
 
   /**

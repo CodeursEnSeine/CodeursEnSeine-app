@@ -9,6 +9,7 @@ import Map from "./pages/Map";
 import { CESTheme } from "./themes";
 import Talk from "./pages/Talk";
 import { FavoritesContextProvider } from "./contexts/FavoritesContext";
+import BottomNavigationAction from "./components/molecules/BottomNavigationAction";
 
 const HostedBy = styled.div`
   padding: 4px
@@ -33,7 +34,17 @@ function App() {
             <Route path="/favorite" component={Favorite} />
             <Route path="/map" component={Map} />
             <Route path="/talks/:id" component={Talk} />
-            <BottomNavigation />
+            <BottomNavigation>
+              <BottomNavigationAction to="/favorite" icon="favorite">
+                Favoris
+              </BottomNavigationAction>
+              <BottomNavigationAction exact to="/" icon="today">
+                Programme
+              </BottomNavigationAction>
+              <BottomNavigationAction to="/map" icon="location_on">
+                Plan
+              </BottomNavigationAction>
+            </BottomNavigation>
           </Router>
         </FavoritesContextProvider>
       </ThemeProvider>

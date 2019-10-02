@@ -43,8 +43,16 @@ function Talk({ match }) {
     }
   };
 
+  const title = talk => {
+    if (talk.formats) {
+      return `${talk.formats} - ${talk.hour}`;
+    }
+
+    return talk.hour;
+  };
+
   return (
-    <Layout loading={loading} title={`${talk.formats} - ${talk.hour}`}>
+    <Layout loading={loading} title={title(talk)}>
       <TalkDisplay talk={talk} />
       {talk.speakers &&
         talk.speakers.map(speaker => (

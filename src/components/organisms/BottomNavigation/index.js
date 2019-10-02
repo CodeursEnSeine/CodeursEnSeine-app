@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import BottomNavigationAction from "../../molecules/BottomNavigationAction";
 
 const propTypes = {
   as: PropTypes.string
@@ -13,19 +12,7 @@ const defaultProps = {
 };
 
 function BottomNavigation({ children, as: Element, ...props }) {
-  return (
-    <Element {...props}>
-      <BottomNavigationAction to="/favorite" icon="favorite">
-        Favoris
-      </BottomNavigationAction>
-      <BottomNavigationAction exact to="/" icon="today">
-        Programme
-      </BottomNavigationAction>
-      <BottomNavigationAction to="/map" icon="location_on">
-        Plan
-      </BottomNavigationAction>
-    </Element>
-  );
+  return <Element {...props}>{children}</Element>;
 }
 
 BottomNavigation.propTypes = propTypes;

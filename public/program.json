@@ -56,13 +56,23 @@
       "state": "event",
       "hour": "17:30"
     },
-    { "id": "KkMo11sOgeSH9EzqwoVQ", "room": "A", "hour": "10:00" },
+    {
+      "id": "KkMo11sOgeSH9EzqwoVQ",
+      "room": "A",
+      "hour": "10:00",
+      "formats": "Conférence"
+    },
     { "id": "R9O1S7M9oRMmwd0cNBaz", "room": "B", "hour": "10:00" },
     { "id": "IV602d8TyliA6EGSV3a3", "room": "C", "hour": "10:00" },
     { "id": "GFl8SnkquoKd5AGWPCgu", "room": "D", "hour": "10:00" },
     { "id": "r5KVofSMuXr5Iv9Arqmh", "room": "A", "hour": "11:00" },
     { "id": "HliAloeXaKU6f3IGy9iB", "room": "B", "hour": "11:00" },
-    { "id": "XvpmnMltEJ6PNv0LBf4e", "room": "C", "hour": "11:00" },
+    {
+      "id": "XvpmnMltEJ6PNv0LBf4e",
+      "room": "C",
+      "hour": "11:00",
+      "formats": "Conférence"
+    },
     { "id": "Sezi1qgi6hT4LYG38UVS", "room": "D", "hour": "11:00" },
     { "id": "CNiMfDqXPl1ST0WCNabT", "room": "A", "hour": "12:00" },
     { "id": "Rr8T3DgvWfZmPKPcijfX", "room": "B", "hour": "12:00" },
