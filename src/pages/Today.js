@@ -5,7 +5,6 @@ import { useTalks } from "../hooks/useTalks";
 import { groupBy } from "lodash";
 import Hour from "../components/atoms/Hour";
 import { sortHours } from "../helpers/sortHours";
-import GreyCard from "../components/molecules/GreyCard";
 
 export default function Today() {
   const [talks, loading] = useTalks();
@@ -23,7 +22,7 @@ export default function Today() {
               .sort((a, b) => a.room.localeCompare(b.room))
               .map(talk =>
                 talk.state === "event" ? (
-                  <GreyCard key={talk.id} conference={talk} />
+                  <Card key={talk.id} conference={talk} />
                 ) : (
                   <Card
                     key={talk.id}

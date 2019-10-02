@@ -1,8 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styled from "styled-components";
-import Header from "../../atoms/Header";
-import Loader from "../../atoms/Loader";
+import { Box, Heading, Spinner } from '@chakra-ui/core';
 
 const propTypes = {
   title: PropTypes.string,
@@ -13,26 +11,33 @@ const defaultProps = {
   loading: false
 };
 
-const StyledSection = styled.section`
-  margin: 8px;
-  margin-bottom: 56px;
-`;
-
 export default function Layout({ children, title, loading }) {
-  if (loading) {
-    return (
-      <React.Fragment>
-        <Header>Loading...</Header>
-        <Loader />
-      </React.Fragment>
-    );
-  }
-
   return (
-    <React.Fragment>
-      <Header>{title}</Header>
-      <StyledSection>{children}</StyledSection>
-    </React.Fragment>
+    <Box
+      p="4"
+      mb="100px"
+    >
+      <Heading
+        size="lg"
+        mb="2"
+      >
+        {title}
+      </Heading>
+      {loading && (
+        <Spinner
+          thickness="4px"
+          speed="0.65s"
+          emptyColor="brand.200"
+          color="brand.600"
+          size="md"
+        />
+      )}
+      {!loading && (
+        <Box>
+          {children}
+        </Box>
+      )}
+    </Box>
   );
 }
 

@@ -7,7 +7,7 @@ export const useFavoriteContext = () => useContext(FavoritesContext);
 
 export const FavoritesContextProvider = ({ children }) => {
   const [favorites, setFavorites] = useState([]);
-  const [talks, ,] = useTalks();
+  const [talks] = useTalks();
 
   useEffect(() => {
     setFavorites(Favorite.getFavorites());
