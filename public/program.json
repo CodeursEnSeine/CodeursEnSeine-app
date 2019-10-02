@@ -16,7 +16,7 @@
         {
           "id": "thierry_croix",
           "displayName": "Thierry Croix",
-          "photoURL": "./images/speakers/thierry-croix.png",
+          "photoURL": "/images/speakers/thierry-croix.png",
           "company": "Go to Next Levels",
           "twitter": "thierrycrx",
           "github": "",
@@ -25,6 +25,46 @@
       ],
       "state": "keynotes",
       "hour": "9:00",
+      "room": "A",
+      "formats": "Keynote"
+    },
+    {
+      "id": "keynote-apres-midi",
+      "title": "Du sang, des larmes et des pixels",
+      "abstract": "En septembre 2010, à Rouen, naquit Sushee, micro-entreprise spécialisée dans le community management et la communication. 8 ans plus tard, la société est bretonne, elle compte 15 salariés, et développe des jeux vidéo pour Square Enix, un géant du secteur. Ce qu’il s’est passé entre les deux ? Nous le découvrirons ensemble pendant cette keynote !",
+      "speakers": [
+        {
+          "id": "Anseaume",
+          "displayName": "Benjamin Anseaume",
+          "photoURL": "/images/speakers/benjamin-anseaume.jpg",
+          "company": "",
+          "twitter": "Anseaume",
+          "github": "",
+          "bio": "Ancien chargé de mission à la Chambre de Commerce et d’Industrie de Haute-Normandie, Benjamin fonde Sushee en 2010. D’abord agence de communication puis studio de jeux vidéo, l’entreprise développe 3 jeux avant de s’arrêter en 2018. Depuis, Benjamin est producteur de jeux vidéo dans une entreprise franco-polonaise qu’il a co-fondé et travaille notamment sur des jeux pour Sega et Square Enix."
+        }
+      ],
+      "state": "keynotes",
+      "hour": "13:20",
+      "room": "A",
+      "formats": "Keynote"
+    },
+    {
+      "id": "keynote-soir",
+      "title": "Carte blanche à Fred Leguédois",
+      "abstract": "Cette année nous donnons 45 mn à Frédéric Leguédois. Nous ne connaissons pas encore le sujet. Cela sera une nouvelle conférence, elle sera peut être plus sérieuse que d'habitude. Mais on est sur que cela sera bien!",
+      "speakers": [
+        {
+          "id": "f_leguedois",
+          "displayName": "Frédéric Leguédois",
+          "photoURL": "/images/speakers/frederic-leguedois.jpg",
+          "company": "Cloud Temple",
+          "twitter": "f_leguedois",
+          "github": "",
+          "bio": "Evangéliste Agile, libriste, voire polémiste ;-) Conférencier iconoclaste chez @CloudTemple . Garanti zéro certification"
+        }
+      ],
+      "state": "keynotes",
+      "hour": "17:30",
       "room": "A",
       "formats": "Keynote"
     },
@@ -48,13 +88,6 @@
       "abstract": "Boire un coup, papoter, visiter les stands ;)",
       "state": "event",
       "hour": "15:20"
-    },
-    {
-      "id": "cloture",
-      "title": "Plénière de Cloture - Surprise !",
-      "abstract": "L'équipe de Codeurs en Seine",
-      "state": "event",
-      "hour": "17:30"
     },
     {
       "id": "KkMo11sOgeSH9EzqwoVQ",
