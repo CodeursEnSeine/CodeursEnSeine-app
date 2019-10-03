@@ -1,0 +1,124 @@
+{
+  "sponsors": [
+    {
+      "name": "Matmut",
+      "type": "gold",
+      "logo": "matmut@web.png",
+      "link": "http://matmut.fr"
+    },
+    {
+      "name": "Sopra Steria",
+      "type": "gold",
+      "logo": "sopra-steria@web.png",
+      "link": "http://www.soprasteria.com/"
+    },
+    {
+      "name": "Attineos",
+      "type": "silver",
+      "logo": "attineos@web.png",
+      "link": "http://www.attineos.com"
+    },
+    {
+      "name": "Saagie",
+      "type": "silver",
+      "logo": "saagie@web.png",
+      "link": "http://www.saagie.com"
+    },
+    {
+      "name": "Clever Cloud",
+      "type": "silver",
+      "logo": "clevercloud@web.png",
+      "link": "https://www.clever-cloud.com/fr/"
+    },
+    {
+      "name": "Devolis",
+      "type": "silver",
+      "logo": "devolis@web.png",
+      "link": "http://www.devolis.fr"
+    },
+    {
+      "name": "Masternaut",
+      "type": "silver",
+      "logo": "masternaut@web.png",
+      "link": "http://www.masternaut.com"
+    },
+    {
+      "name": "SQLI",
+      "type": "silver",
+      "logo": "sqli@web.png",
+      "link": "http://www.sqli.com/"
+    },
+    {
+      "name": "Budget Box",
+      "type": "silver",
+      "logo": "budgetbox@web.png",
+      "link": "http://www.budget-box.com"
+    },
+    {
+      "name": "EXIA.CESI",
+      "type": "silver",
+      "logo": "cesi@web.png",
+      "link": "https://rouen.cesi.fr/"
+    },
+    {
+      "name": "Digit",
+      "type": "bronze",
+      "logo": "digit@web.jpg",
+      "link": "https://www.justdigit.fr/"
+    },
+    {
+      "name": "Wixiweb",
+      "type": "bronze",
+      "logo": "wixiweb@web.png",
+      "link": "http://www.wixiweb.fr/"
+    },
+    {
+      "name": "Bear Studio",
+      "type": "bronze",
+      "logo": "bearstudio@web.png",
+      "link": "http://www.bearstudio.fr"
+    },
+    {
+      "name": "Invoke",
+      "type": "bronze",
+      "logo": "invoke@web.png",
+      "link": "http://www.invoke-software.fr"
+    },
+    {
+      "name": "Coaxys",
+      "type": "bronze",
+      "logo": "coaxys@web.png",
+      "link": "http://www.coaxys.com"
+    },
+    {
+      "name": "SPREAD",
+      "type": "bronze",
+      "logo": "spread@web.png",
+      "link": "http://www.spreadfamily.fr"
+    },
+    {
+      "name": "Proxiad",
+      "type": "bronze",
+      "logo": "proxiad@web.png",
+      "link": "http://www.proxiad.com"
+    },
+    {
+      "name": "Docapost Agility",
+      "type": "bronze",
+      "logo": "docapost-agility@web.png",
+      "link": "https://www.docapost-agility.fr/"
+    },
+    {
+      "name": "WeLoveDevs",
+      "type": "partner",
+      "logo": "welovedevs@web.png",
+      "link": "https://welovedevs.com"
+    },
+    {
+      "name": "Programmez!",
+      "type": "partner",
+      "logo": "programmez@web.png",
+      "link": "https://www.programmez.com/"
+    }
+  ]
+}

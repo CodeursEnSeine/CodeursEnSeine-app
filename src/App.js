@@ -3,14 +3,14 @@ import { ThemeProvider, CSSReset, Box } from "@chakra-ui/core";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import HttpsRedirect from "react-https-redirect";
 import { MdFavorite, MdToday, MdLocationOn } from "react-icons/md";
-import BottomNavigation from "./components/organisms/BottomNavigation";
+import BottomNavigation from "./components/BottomNavigation";
 import Favorite from "./pages/Favorite";
 import Today from "./pages/Today";
 import Map from "./pages/Map";
 import { themeCES } from "./themes/ces";
 import Talk from "./pages/Talk";
 import { FavoritesContextProvider } from "./contexts/FavoritesContext";
-import BottomNavigationAction from "./components/molecules/BottomNavigationAction";
+import BottomNavigationAction from "./components/BottomNavigationAction";
 import { HostedBy } from "./components/HostedBy";
 
 function App() {

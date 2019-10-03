@@ -4,6 +4,12 @@ export default class Cache {
    * https://developers.google.com/web/fundamentals/instant-and-offline/web-storage/cache-api#creating_and_opening_a_cache
    */
   static async get() {
-    return await caches.open("ces-2019");
+    try {
+      return await caches.open("ces-2019");
+    } catch (error) {
+      console.error(
+        "Your connection is not secure and the cache cannot be open"
+      );
+    }
   }
 }

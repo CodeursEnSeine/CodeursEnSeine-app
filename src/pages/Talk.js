@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import Layout from "../components/templates/Layout";
-import TalkDisplay from "../components/organisms/TalkDisplay";
-import FAV from "../components/atoms/FAV";
+import TalkDisplay from "../components/TalkDisplay";
+import FAV from "../components/FAV";
 import { useTalks } from "../hooks/useTalks";
-import SpeakerDisplay from "../components/organisms/SpeakerDisplay";
+import SpeakerDisplay from "../components/SpeakerDisplay";
+import { SponsorsDisplay } from "../components/SponsorsDisplay";
 
 const propTypes = {
   match: PropTypes.object.isRequired
@@ -38,6 +39,7 @@ function Talk({ match }) {
         talk.speakers.map(speaker => (
           <SpeakerDisplay key={speaker.id} speaker={speaker} />
         ))}
+      <SponsorsDisplay />
       <FAV
         talk={talk}
         position="fixed"

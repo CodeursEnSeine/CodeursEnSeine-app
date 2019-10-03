@@ -1,9 +1,9 @@
 import React, { Fragment } from "react";
 import Layout from "../components/templates/Layout";
-import Card from "../components/molecules/Card";
+import Card from "../components/Card";
 import { useTalks } from "../hooks/useTalks";
 import { groupBy } from "lodash";
-import Hour from "../components/atoms/Hour";
+import Hour from "../components/Hour";
 import { sortHours } from "../helpers/sortHours";
 
 export default function Today() {

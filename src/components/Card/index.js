@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Box, Heading, Text, Badge } from "@chakra-ui/core";
-import FAV from "../../atoms/FAV";
+import FAV from "../FAV";
 
 const propTypes = {};
 const defaultProps = {};

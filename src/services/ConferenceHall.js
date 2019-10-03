@@ -6,7 +6,9 @@ export default class ConferenceHall {
     const json = await response.json();
     const cache = await Cache.get();
 
-    cache.put(new Request("/program.json"), new Response(json));
+    if (cache) {
+      cache.put(new Request("/program.json"), new Response(json));
+    }
 
     return json;
   }
@@ -18,12 +20,14 @@ export default class ConferenceHall {
     const json = await response.json();
     const cache = await Cache.get();
 
-    cache.put(
-      new Request(
-        "https://blog.yoannfleury.dev/conference-hall-fetch/confs.json"
-      ),
-      new Response(json)
-    );
+    if (cache) {
+      cache.put(
+        new Request(
+          "https://blog.yoannfleury.dev/conference-hall-fetch/confs.json"
+        ),
+        new Response(json)
+      );
+    }
 
     return json;
   }

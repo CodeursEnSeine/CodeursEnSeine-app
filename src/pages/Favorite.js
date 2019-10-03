@@ -3,9 +3,9 @@ import { groupBy } from "lodash";
 
 import Layout from "../components/templates/Layout";
 import { FavoritesContext } from "../contexts/FavoritesContext";
-import Card from "../components/molecules/Card";
+import Card from "../components/Card";
 import { useTalks } from "../hooks/useTalks";
-import Hour from "../components/atoms/Hour";
+import Hour from "../components/Hour";
 import { sortHours } from "../helpers/sortHours";
 
 export default function Favorite() {

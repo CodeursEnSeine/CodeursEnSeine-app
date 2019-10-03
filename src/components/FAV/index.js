@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
 import { IconButton } from "@chakra-ui/core";
 import { MdFavorite } from "react-icons/md";
-import { FavoritesContext } from "../../../contexts/FavoritesContext";
-import Favorite from "../../../services/Favorite";
+import { FavoritesContext } from "../../contexts/FavoritesContext";
+import Favorite from "../../services/Favorite";
 
 const propTypes = {};
 const defaultProps = {};
