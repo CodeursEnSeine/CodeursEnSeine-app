@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { useLocation, Link } from 'react-router-dom';
-import { Flex, Text, Box } from '@chakra-ui/core';
+import { useLocation, Link } from "react-router-dom";
+import { Flex, Text, Box } from "@chakra-ui/core";
 
 const propTypes = {
   className: PropTypes.oneOfType([
@@ -16,14 +16,21 @@ const defaultProps = {
   exact: false
 };
 
-const BottomNavigationAction = ({ className, exact, to, iconElement: IconElement, children, ...props }) => {
+const BottomNavigationAction = ({
+  className,
+  exact,
+  to,
+  iconElement: IconElement,
+  children,
+  ...props
+}) => {
   const location = useLocation();
 
   return (
     <Flex
       as={Link}
       to={to}
-      color={to === location.pathname ? 'white' : 'brand.200'}
+      color={to === location.pathname ? "white" : "brand.200"}
       flexDir="column"
       align="center"
       flexGrow="1"
@@ -31,18 +38,11 @@ const BottomNavigationAction = ({ className, exact, to, iconElement: IconElement
       p="2"
       {...props}
     >
-      <Box
-        as={IconElement}
-        size="22px"
-      />
-      <Text
-        fontSize="xs"
-      >
-        {children}
-      </Text>
+      <Box as={IconElement} size="22px" />
+      <Text fontSize="xs">{children}</Text>
     </Flex>
   );
-}
+};
 
 export default BottomNavigationAction;
 

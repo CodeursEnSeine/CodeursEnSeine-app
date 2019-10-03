@@ -1,7 +1,15 @@
 import React, { useState } from "react";
-import marked from 'marked';
-import { Box, Text, Stack, Heading, Button, AspectRatioBox, Flex } from "@chakra-ui/core";
-import { MdBrokenImage } from 'react-icons/md';
+import marked from "marked";
+import {
+  Box,
+  Text,
+  Stack,
+  Heading,
+  Button,
+  AspectRatioBox,
+  Flex
+} from "@chakra-ui/core";
+import { MdBrokenImage } from "react-icons/md";
 
 const propTypes = {};
 
@@ -13,26 +21,28 @@ const SpeakerDisplay = ({ speaker }) => {
   return (
     <Box my="8">
       <Stack isInline spacing="4" mb="4">
-          <AspectRatioBox
-            ratio={1}
-            width={100}
-            backgroundColor="gray.100"
-            rounded="md"
-            shadow="paper"
-            overflow="hidden"
-          >
-            <Flex align="center" justify="center">
-              {!showAvatar && <Box as={MdBrokenImage} size="30px" color="gray.300" />}
-              {showAvatar && (
-                <Box
-                  as="img"
-                  src={speaker.photoURL}
-                  alt={speaker.displayName}
-                  onError={() => setShowAvatar(false)}
-                />
-              )}
-            </Flex>
-          </AspectRatioBox>
+        <AspectRatioBox
+          ratio={1}
+          width={100}
+          backgroundColor="gray.100"
+          rounded="md"
+          shadow="paper"
+          overflow="hidden"
+        >
+          <Flex align="center" justify="center">
+            {!showAvatar && (
+              <Box as={MdBrokenImage} size="30px" color="gray.300" />
+            )}
+            {showAvatar && (
+              <Box
+                as="img"
+                src={speaker.photoURL}
+                alt={speaker.displayName}
+                onError={() => setShowAvatar(false)}
+              />
+            )}
+          </Flex>
+        </AspectRatioBox>
         )}
         <Box>
           <Box mb="2">
@@ -71,9 +81,7 @@ const SpeakerDisplay = ({ speaker }) => {
           </Stack>
         </Box>
       </Stack>
-      <Text
-        dangerouslySetInnerHTML={{ __html: marked(speaker.bio || "") }}
-      />
+      <Text dangerouslySetInnerHTML={{ __html: marked(speaker.bio || "") }} />
     </Box>
   );
 };

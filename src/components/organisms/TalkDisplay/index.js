@@ -20,14 +20,8 @@ const TalkDisplay = ({ talk }) => {
 
   return (
     <Box mb="4">
-      <Box
-        mb="4"
-      >
-        <Heading
-          as="h4"
-          fontSize="md"
-          mb="1"
-        >
+      <Box mb="4">
+        <Heading as="h4" fontSize="md" mb="1">
           {typeAndHour()}
         </Heading>
         <Stack isInline>

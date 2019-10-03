@@ -28,7 +28,10 @@ function App() {
                 <Route path="/map" component={Map} />
                 <Route path="/talks/:id" component={Talk} />
                 <BottomNavigation>
-                  <BottomNavigationAction to="/favorite" iconElement={MdFavorite}>
+                  <BottomNavigationAction
+                    to="/favorite"
+                    iconElement={MdFavorite}
+                  >
                     Favoris
                   </BottomNavigationAction>
                   <BottomNavigationAction exact to="/" iconElement={MdToday}>

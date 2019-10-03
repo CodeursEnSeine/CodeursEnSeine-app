@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Box, Heading, Spinner } from '@chakra-ui/core';
+import { Box, Heading, Spinner } from "@chakra-ui/core";
 
 const propTypes = {
   title: PropTypes.string,
@@ -13,14 +13,8 @@ const defaultProps = {
 
 export default function Layout({ children, title, loading }) {
   return (
-    <Box
-      p="4"
-      mb="100px"
-    >
-      <Heading
-        size="lg"
-        mb="2"
-      >
+    <Box p="4" mb="100px">
+      <Heading size="lg" mb="2">
         {title}
       </Heading>
       {loading && (
@@ -32,11 +26,7 @@ export default function Layout({ children, title, loading }) {
           size="md"
         />
       )}
-      {!loading && (
-        <Box>
-          {children}
-        </Box>
-      )}
+      {!loading && <Box>{children}</Box>}
     </Box>
   );
 }

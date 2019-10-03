@@ -1,22 +1,17 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Heading } from '@chakra-ui/core';
+import React from "react";
+import PropTypes from "prop-types";
+import { Heading } from "@chakra-ui/core";
 
 const propTypes = {
-  children: PropTypes.node,
+  children: PropTypes.node
 };
 const defaultProps = {
-  children: '',
+  children: ""
 };
 
 const Hour = ({ children }) => {
   return (
-    <Heading
-      as="h4"
-      fontSize="md"
-      mt="6"
-      mb="2"
-    >
+    <Heading as="h4" fontSize="md" mt="6" mb="2">
       {children}
     </Heading>
   );

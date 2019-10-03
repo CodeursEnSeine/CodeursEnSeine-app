@@ -37,9 +37,7 @@ export default function Favorite() {
                 favorites.includes(talk.id)
               ) && (
                 <Fragment key={hour}>
-                  <Hour>
-                    {hour}
-                  </Hour>
+                  <Hour>{hour}</Hour>
                   {talksGroupedByHour[hour]
                     .sort((a, b) => a.room.localeCompare(b.room))
                     .map(
@@ -50,12 +48,11 @@ export default function Favorite() {
                             to={`/talks/${talk.id}`}
                             conference={talk}
                           />
-                    )
-                  )}
+                        )
+                    )}
                 </Fragment>
               )
-          )
-        }
+          )}
       </>
     </Layout>
   );

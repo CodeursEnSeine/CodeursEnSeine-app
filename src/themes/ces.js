@@ -11,7 +11,7 @@ export const themeCES = {
       rgba(32, 47, 71, 0.06) 0px 0.1875rem 0.375rem 0px,
       rgba(32, 47, 71, 0.04) 0px -0.25rem 0.5rem -0.125rem,
       rgba(32, 47, 71, 0.03) 0px 0px 0px 0.0625rem;
-    `,
+    `
   },
   colors: {
     ...theme.colors,
@@ -25,7 +25,7 @@ export const themeCES = {
       700: "#0066b3",
       800: "#004081",
       900: "#001c50",
-      1000: "#000120",
-    },
-  },
+      1000: "#000120"
+    }
+  }
 };
