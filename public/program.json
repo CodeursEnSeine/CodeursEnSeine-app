@@ -136,11 +136,16 @@
       ]
     },
     {
-      "id": "sponsors-sopra",
-      "title": "Sponsors",
-      "abstract": "Sopra",
+      "id": "sponsors_sopra",
+      "title": "Le MCU JavaScript",
+      "state": "confirmed",
+      "level": "intermediate",
+      "abstract": "Bienvenue dans le <b>JavaScript Main Code Universal</b> !\nComme pour le scénario des films MCU, je vais vous prouver qu’il est possible d’<b>utiliser le même code JS sur des supports différents</b>.\nWeb, Mobile, Desktop App, … rien n’est impossible pour notre langage héros !\nIl se trouvera également au côté de ses fidèles compagnons : <b>NodeJS, Cordova et Electron</b>.\n\nDans les salles le 21 Novembre 2019 à la Kindarena.",
+      "categories": "cff3cdbc-52e9-5d5a-8f98-927ee005f59b",
+      "formats": "c7a928ca-8a27-527a-b726-4affa896e10e",
+      "speakers": ["KdSaic3sOoezsY7SHROMB8tmGnn2"],
+      "language": "Français",
       "room": "A",
-      "state": "sponsors",
       "hour": "14:10"
     },
     { "id": "OSeRNhvgAv183XS9gPAA", "room": "B", "hour": "14:10" },
