@@ -1,5 +1,6 @@
 import React from "react";
 import { Box } from "@chakra-ui/core";
+import { MdLaunch } from "react-icons/md";
 
 const propTypes = {};
 const defaultProps = {};
@@ -16,7 +17,8 @@ export const HostedBy = () => {
       fontSize="xs"
       color="brand.200"
     >
-      Application herbergée par Clever Cloud
+      Application herbergée par Clever Cloud{" "}
+      <MdLaunch style={{ display: "inline" }} />
     </Box>
   );
 };

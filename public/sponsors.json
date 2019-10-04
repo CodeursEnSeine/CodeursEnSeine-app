@@ -61,6 +61,12 @@
       "link": "https://rouen.cesi.fr/"
     },
     {
+      "name": "Enovea",
+      "type": "silver",
+      "logo": "enovea@web.png",
+      "link": "http://www.enovea.net/"
+    },
+    {
       "name": "Digit",
       "type": "bronze",
       "logo": "digit@web.jpg",

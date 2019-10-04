@@ -111,15 +111,32 @@
     { "id": "Rr8T3DgvWfZmPKPcijfX", "room": "B", "hour": "12:00" },
     { "id": "xSUlYy6soA37mp6AKQNG", "room": "C", "hour": "12:00" },
     {
-      "id": "sponsors",
-      "title": "Sponsors",
-      "abstract": "Matmut",
+      "id": "sponsors_matmut",
+      "title": "Cobol for Ever : Comment faire du neuf avec un SI âgé de plus de 40 ans ?",
+      "abstract": "<p>Nous n’avons pas tous la chance d’être une startup partant de la feuille blanche pour créer son SI.</p><p>Avec 58 ans d’existence, la Matmut possède le plus important système d’information de la région qui s’appuie sur 2 Data-Centers et ...du Cobol. Le Cobol est né en septembre 1959 et 60 ans plus tard la finance mondiale repose toujours sur lui. A la Matmut, il continue de répondre aux 300 nouvelles demandes annuelles du développement Backoffice. Le principe de KISS (Keep It Simple, Stupid) et beaucoup de bon sens ont souvent été déterminants dans les choix de nos architectures.</p><p>En 15 minutes, nous vous ferons découvrir la magie du Cobol et les architectures en place pour consommer nos données dans les projets .Net/C#, WepAPI, BigData, IA et React.</p>",
       "room": "D",
       "state": "sponsors",
-      "hour": "12:00"
+      "hour": "12:00",
+      "speakers": [
+        {
+          "id": "CDESLANDES",
+          "displayName": "Cédric Deslandes",
+          "photoURL": "x"
+        },
+        {
+          "id": "ELESUEUR",
+          "displayName": "Elie Lesueur",
+          "photoURL": "x"
+        },
+        {
+          "id": "NDUJARDIN",
+          "displayName": "Nicolas Dujardin",
+          "photoURL": "x"
+        }
+      ]
     },
     {
-      "id": "sponsors2",
+      "id": "sponsors-sopra",
       "title": "Sponsors",
       "abstract": "Sopra",
       "room": "A",

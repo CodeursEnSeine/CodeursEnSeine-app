@@ -1,22 +1,29 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Box, Heading, Spinner } from "@chakra-ui/core";
+import { Box, Heading, Spinner, Stack, IconButton } from "@chakra-ui/core";
+import { MdArrowBack } from "react-icons/md";
 
 const propTypes = {
+  goBack: PropTypes.func,
   title: PropTypes.string,
   loading: PropTypes.bool.isRequired
 };
 
 const defaultProps = {
+  goBack: null,
   loading: false
 };
 
-export default function Layout({ children, title, loading }) {
+export default function Layout({ children, goBack, title, loading }) {
   return (
     <Box p="4" mb="100px">
-      <Heading size="lg" mb="2">
-        {title}
-      </Heading>
+      <Stack isInline alignItems="center">
+        {goBack && <IconButton isRound icon={MdArrowBack} onClick={goBack} />}
+        <Heading size="lg" mb="2">
+          {title}
+        </Heading>
+      </Stack>
+
       {loading && (
         <Spinner
           thickness="4px"
