@@ -138,12 +138,21 @@
     {
       "id": "sponsors_sopra",
       "title": "Le MCU JavaScript",
-      "state": "confirmed",
+      "state": "sponsors",
       "level": "intermediate",
       "abstract": "Bienvenue dans le <b>JavaScript Main Code Universal</b> !\nComme pour le scénario des films MCU, je vais vous prouver qu’il est possible d’<b>utiliser le même code JS sur des supports différents</b>.\nWeb, Mobile, Desktop App, … rien n’est impossible pour notre langage héros !\nIl se trouvera également au côté de ses fidèles compagnons : <b>NodeJS, Cordova et Electron</b>.\n\nDans les salles le 21 Novembre 2019 à la Kindarena.",
-      "categories": "cff3cdbc-52e9-5d5a-8f98-927ee005f59b",
-      "formats": "c7a928ca-8a27-527a-b726-4affa896e10e",
-      "speakers": ["KdSaic3sOoezsY7SHROMB8tmGnn2"],
+      "speakers": [
+        {
+          "id": "KdSaic3sOoezsY7SHROMB8tmGnn2",
+          "displayName": "Cyril Lefebvre",
+          "bio": "Référent technique web et responsable innovation chez Sopra Steria Rouen.\n",
+          "speakerReferences": "Vivatech 2018 - Conférence Hololens\nCodeur en Seine 2018 - Angular & PWA : Mon site survit à l'apocalypse !\nCodeur en Seine 2017 - Initiative Hololens",
+          "company": "Sopra Steria",
+          "photoURL": "https://avatars2.githubusercontent.com/u/11617732?v=4",
+          "github": "LirycMoaners"
+        }
+      ],
+      "formats": "Quicky",
       "language": "Français",
       "room": "A",
       "hour": "14:10"
