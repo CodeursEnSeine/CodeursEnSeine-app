@@ -26,11 +26,11 @@ function App() {
               <Route path="/map" component={Map} />
               <Route path="/talks/:id" component={Talk} />
               <BottomNavigation>
-                <BottomNavigationAction to="/favorite" iconElement={MdFavorite}>
-                  Favoris
-                </BottomNavigationAction>
                 <BottomNavigationAction exact to="/" iconElement={MdToday}>
                   Programme
+                </BottomNavigationAction>
+                <BottomNavigationAction to="/favorite" iconElement={MdFavorite}>
+                  Favoris
                 </BottomNavigationAction>
                 <BottomNavigationAction to="/map" iconElement={MdLocationOn}>
                   Plan
