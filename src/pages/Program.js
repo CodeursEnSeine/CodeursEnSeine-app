@@ -15,10 +15,15 @@ export default function Program({ isFavorite = false }) {
 
   useEffect(() => {
     if (!loading) {
-      window.scrollTo(0, sessionStorage.getItem(PROGRAM_SCROLL_OFFSET_KEY));
+      const IS_FAVORITE_KEY = `${PROGRAM_SCROLL_OFFSET_KEY}${
+        isFavorite ? "-fav" : ""
+      }`;
+
+      console.log(IS_FAVORITE_KEY);
+      window.scrollTo(0, sessionStorage.getItem(IS_FAVORITE_KEY));
 
       const lastPosition = () => {
-        sessionStorage.setItem(PROGRAM_SCROLL_OFFSET_KEY, window.scrollY);
+        sessionStorage.setItem(IS_FAVORITE_KEY, window.scrollY);
       };
 
       window.addEventListener("scroll", lastPosition);
@@ -27,7 +32,7 @@ export default function Program({ isFavorite = false }) {
         window.removeEventListener("scroll", lastPosition);
       };
     }
-  }, [loading]);
+  }, [loading, isFavorite]);
 
   const talksGroupedByHour = groupBy(talks, "hour");
 
