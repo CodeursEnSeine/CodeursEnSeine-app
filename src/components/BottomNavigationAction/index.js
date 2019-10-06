@@ -37,6 +37,10 @@ const BottomNavigationAction = ({
       flexBasis="100%"
       p="2"
       {...props}
+      onClick={() => {
+        if (to === location.pathname)
+          window.scrollTo({ behavior: "smooth", top: 0 });
+      }}
     >
       <Box as={IconElement} size="22px" />
       <Text fontSize="xs">{children}</Text>

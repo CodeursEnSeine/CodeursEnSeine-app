@@ -1,5 +1,5 @@
-import React, { Fragment, useContext } from "react";
-import { FavoritesContext } from "../contexts/FavoritesContext";
+import React, { Fragment, useEffect } from "react";
+import { useFavoriteContext } from "../contexts/FavoritesContext";
 import Layout from "../components/templates/Layout";
 import Card from "../components/Card";
 import { useTalks } from "../hooks/useTalks";
@@ -7,14 +7,31 @@ import { groupBy } from "lodash";
 import Hour from "../components/Hour";
 import { sortHours } from "../helpers/sortHours";
 
+export const PROGRAM_SCROLL_OFFSET_KEY = "scroll-offset";
+
 export default function Program({ isFavorite = false }) {
   const [talks, loading] = useTalks();
+  const { favorites } = useFavoriteContext();
+
+  useEffect(() => {
+    if (!loading) {
+      window.scrollTo(0, sessionStorage.getItem(PROGRAM_SCROLL_OFFSET_KEY));
+
+      const lastPosition = () => {
+        sessionStorage.setItem(PROGRAM_SCROLL_OFFSET_KEY, window.scrollY);
+      };
+
+      window.addEventListener("scroll", lastPosition);
+
+      return () => {
+        window.removeEventListener("scroll", lastPosition);
+      };
+    }
+  }, [loading]);
 
   const talksGroupedByHour = groupBy(talks, "hour");
 
-  const favoritesContext = useContext(FavoritesContext);
-
-  const { favorites } = favoritesContext;
+  const sortRoom = (a, b) => a.room.localeCompare(b.room);
 
   const getContent = () => {
     if (isFavorite) {
@@ -37,7 +54,7 @@ export default function Program({ isFavorite = false }) {
               <Fragment key={hour}>
                 <Hour>{hour}</Hour>
                 {talksGroupedByHour[hour]
-                  .sort((a, b) => a.room.localeCompare(b.room))
+                  .sort(sortRoom)
                   .map(
                     talk =>
                       favorites.includes(talk.id) && (
@@ -59,7 +76,7 @@ export default function Program({ isFavorite = false }) {
         <Fragment key={hour}>
           <Hour>{hour}</Hour>
           {talksGroupedByHour[hour]
-            .sort((a, b) => a.room.localeCompare(b.room))
+            .sort(sortRoom)
             .map(talk =>
               talk.state === "event" ? (
                 <Card key={talk.id} talk={talk} />
