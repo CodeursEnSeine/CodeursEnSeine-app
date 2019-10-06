@@ -3,8 +3,7 @@ import { ThemeProvider, CSSReset, Box } from "@chakra-ui/core";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import { MdFavorite, MdToday, MdLocationOn } from "react-icons/md";
 import BottomNavigation from "./components/BottomNavigation";
-import Favorite from "./pages/Favorite";
-import Today from "./pages/Today";
+import Program from "./pages/Program";
 import Map from "./pages/Map";
 import { themeCES } from "./themes/ces";
 import Talk from "./pages/Talk";
@@ -21,8 +20,8 @@ function App() {
           <FavoritesContextProvider>
             <Router>
               <HostedBy />
-              <Route exact path="/" component={Today} />
-              <Route path="/favorite" component={Favorite} />
+              <Route exact path="/" component={Program} />
+              <Route path="/favorite" render={() => <Program isFavorite />} />
               <Route path="/map" component={Map} />
               <Route path="/talks/:id" component={Talk} />
               <BottomNavigation>
