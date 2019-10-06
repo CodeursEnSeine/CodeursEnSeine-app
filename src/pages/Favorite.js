@@ -46,7 +46,7 @@ export default function Favorite() {
                           <Card
                             key={talk.id}
                             to={`/talks/${talk.id}`}
-                            conference={talk}
+                            talk={talk}
                           />
                         )
                     )}

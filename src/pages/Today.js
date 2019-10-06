@@ -22,13 +22,9 @@ export default function Today() {
               .sort((a, b) => a.room.localeCompare(b.room))
               .map(talk =>
                 talk.state === "event" ? (
-                  <Card key={talk.id} conference={talk} />
+                  <Card key={talk.id} talk={talk} />
                 ) : (
-                  <Card
-                    key={talk.id}
-                    to={`/talks/${talk.id}`}
-                    conference={talk}
-                  />
+                  <Card key={talk.id} to={`/talks/${talk.id}`} talk={talk} />
                 )
               )}
           </Fragment>

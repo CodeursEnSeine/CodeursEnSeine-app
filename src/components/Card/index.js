@@ -6,10 +6,10 @@ import FAV from "../FAV";
 const propTypes = {};
 const defaultProps = {};
 
-const Card = ({ conference, to, ...props }) => {
+const Card = ({ talk, to, ...props }) => {
   // Check if conference as a speakers key. If not, set speakers to null.
-  const speakers = conference.speakers
-    ? conference.speakers.map(speaker => speaker.displayName).join(" • ")
+  const speakers = talk.speakers
+    ? talk.speakers.map(speaker => speaker.displayName).join(" • ")
     : null;
 
   const isTalk = !!to;
@@ -32,23 +32,15 @@ const Card = ({ conference, to, ...props }) => {
         {...props}
       >
         <Heading as="h5" fontSize="md" fontWeight="semibold" mb="1">
-          {conference.title}
+          {talk.title}
         </Heading>
         <Text fontSize="xs" color="gray.500" fontWeight="semibold" mb="1">
           {speakers}
         </Text>
-        {!!conference.room && (
-          <Badge variantColor="brand">Salle {conference.room}</Badge>
-        )}
+        {!!talk.room && <Badge variantColor="brand">Salle {talk.room}</Badge>}
       </Box>
       {isTalk && (
-        <FAV
-          talk={conference}
-          position="absolute"
-          bottom="1"
-          right="1"
-          size="sm"
-        />
+        <FAV talk={talk} position="absolute" bottom="1" right="1" size="sm" />
       )}
     </Box>
   );
