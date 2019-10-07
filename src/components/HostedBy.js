@@ -17,7 +17,7 @@ export const HostedBy = () => {
       fontSize="xs"
       color="brand.200"
     >
-      Application herbergée par Clever Cloud{" "}
+      Application hébergée par Clever Cloud{" "}
       <MdLaunch style={{ display: "inline" }} />
     </Box>
   );
