@@ -97,9 +97,9 @@
     },
     { "id": "R9O1S7M9oRMmwd0cNBaz", "room": "B", "hour": "10:00" },
     { "id": "IV602d8TyliA6EGSV3a3", "room": "C", "hour": "10:00" },
-    { "id": "GFl8SnkquoKd5AGWPCgu", "room": "D", "hour": "10:00" },
+    { "id": "GFl8SnkquoKd5AGWPCgu", "room": "B", "hour": "16:40" },
     { "id": "r5KVofSMuXr5Iv9Arqmh", "room": "A", "hour": "11:00" },
-    { "id": "HliAloeXaKU6f3IGy9iB", "room": "B", "hour": "11:00" },
+    { "id": "HliAloeXaKU6f3IGy9iB", "room": "B", "hour": "15:40" },
     {
       "id": "XvpmnMltEJ6PNv0LBf4e",
       "room": "C",
@@ -107,14 +107,14 @@
       "formats": "Conférence"
     },
     { "id": "Sezi1qgi6hT4LYG38UVS", "room": "D", "hour": "11:00" },
-    { "id": "CNiMfDqXPl1ST0WCNabT", "room": "A", "hour": "12:00" },
-    { "id": "Rr8T3DgvWfZmPKPcijfX", "room": "B", "hour": "12:00" },
-    { "id": "xSUlYy6soA37mp6AKQNG", "room": "C", "hour": "12:00" },
+    { "id": "CNiMfDqXPl1ST0WCNabT", "room": "B", "hour": "12:00" },
+    { "id": "OSeRNhvgAv183XS9gPAA", "room": "C", "hour": "12:00" },
+    { "id": "xSUlYy6soA37mp6AKQNG", "room": "D", "hour": "12:00" },
     {
       "id": "sponsors_matmut",
       "title": "Cobol for Ever : Comment faire du neuf avec un SI âgé de plus de 40 ans ?",
       "abstract": "<p>Nous n’avons pas tous la chance d’être une startup partant de la feuille blanche pour créer son SI.</p><p>Avec 58 ans d’existence, la Matmut possède le plus important système d’information de la région qui s’appuie sur 2 Data-Centers et ...du Cobol. Le Cobol est né en septembre 1959 et 60 ans plus tard la finance mondiale repose toujours sur lui. A la Matmut, il continue de répondre aux 300 nouvelles demandes annuelles du développement Backoffice. Le principe de KISS (Keep It Simple, Stupid) et beaucoup de bon sens ont souvent été déterminants dans les choix de nos architectures.</p><p>En 15 minutes, nous vous ferons découvrir la magie du Cobol et les architectures en place pour consommer nos données dans les projets .Net/C#, WepAPI, BigData, IA et React.</p>",
-      "room": "D",
+      "room": "A",
       "state": "sponsors",
       "hour": "12:00",
       "speakers": [
@@ -126,11 +126,6 @@
         {
           "id": "ELESUEUR",
           "displayName": "Elie Lesueur",
-          "photoURL": "x"
-        },
-        {
-          "id": "NDUJARDIN",
-          "displayName": "Nicolas Dujardin",
           "photoURL": "x"
         }
       ]
@@ -157,20 +152,41 @@
       "room": "A",
       "hour": "14:10"
     },
-    { "id": "OSeRNhvgAv183XS9gPAA", "room": "B", "hour": "14:10" },
-    { "id": "LoHv3uRAMoOW0po8boZF", "room": "C", "hour": "14:10" },
-    { "id": "tYSdKQvuEtgH7nLokY0e", "room": "D", "hour": "14:10" },
+    { "id": "dg5S7DPV59o3oHu4tDS2", "room": "C", "hour": "14:10" },
+    { "id": "LoHv3uRAMoOW0po8boZF", "room": "D", "hour": "14:10" },
+    { "id": "tYSdKQvuEtgH7nLokY0e", "room": "B", "hour": "14:10" },
     { "id": "lVGzSfeR3aKEFVb7GPqe", "room": "A", "hour": "14:30" },
     { "id": "L7wGcba1eGaOagSZrlf1", "room": "B", "hour": "14:30" },
     { "id": "541nPsSDD5Ea2WiR2nkM", "room": "C", "hour": "14:30" },
-    { "id": "Tip6P4wzn78kIJA0v95D", "room": "D", "hour": "14:30" },
+    {
+      "id": "Tip6P4wzn78kIJA0v95D",
+      "room": "D",
+      "hour": "14:30",
+      "title": "Et si Mario était UX designer",
+      "abstract": "Avez-vous déjà ressenti de la frustration en jouant à un jeu vidéo à cause de commandes non intuitives ? Vous êtes-vous déjà ennuyés devant des pages de chargement trop longues ? Vous aussi, vous pensez que les inventaires sont souvent mal conçus ? Si vous vous sentez concernés par ces problématiques, alors vous avez aussi expérimenté des problèmes d'expérience utilisateur dans votre vie de gamer. Nous vous proposons un nouvel angle de vue sur la UX, en vous apportant des exemples concrets issus des grands hits des jeux vidéo. En partant d'exemples de rétrogaming jusqu'aux blockbusters récents de l'industrie du jeu, nous ferons le tour d'éléments essentiels qui concourent à une bonne expérience. La UX est parfois là où on ne l'attend pas, venez explorer une nouvelle approche plus parlante et plus fun sous l'angle des jeux vidéo, où utilisabilité et jouabilité ne sont pas si éloignées ! Et si vous reconsidéreriez l'expérience utilisateur sous l'angle de l'expérience gamer ? ",
+      "speakers": [
+        {
+          "id": "ANemery",
+          "displayName": "Alexandra Nemery",
+          "bio": "Je suis détentrice d'un doctorat en interactions homme-machine, j'ai donné des cours à l'EPITA, écrit des articles sur le persuasive design et j'ai déjà été speaker dans des conférences. Après une expérience comme UX designer chez SAP et UX manager chez Sage, je suis actuellement UX specialist à Ubisoft Montréal ainsi que freelance pour le projet mobile.",
+          "photoURL": "https://lh4.googleusercontent.com/-8X_czY6n2ZA/AAAAAAAAAAI/AAAAAAAAHVs/cBsHqGZUwxc/photo.jpg"
+        },
+        {
+          "id": "SColmon",
+          "displayName": "Sarah Colmon",
+          "bio": "Ingénieure en cognitique, je suis issue d'un cursus qui mêle expérience utilisateur et informatique. Mon expérience a porté sur différents domaines, de l'accessibilité dans le champ médical à la participation à la mise en place d'un user lab, en passant par la création d'un guide méthodologique UX. Je travaille actuellement à Murex, en tant que consultante UX et product manager de la UI.",
+          "company": "Murex",
+          "photoURL": "xx"
+        }
+      ]
+    },
     { "id": "N2XmjJJkwUASIHLHtoTR", "room": "A", "hour": "15:40" },
-    { "id": "7c8PP1lBaglzU3AwCkqB", "room": "B", "hour": "15:40" },
+    { "id": "7c8PP1lBaglzU3AwCkqB", "room": "C", "hour": "16:40" },
     { "id": "9UKGzjZ3bYCcoZtso63N", "room": "C", "hour": "15:40" },
     { "id": "smPOMJiKpyDx0Mi9TbwH", "room": "D", "hour": "15:40" },
     { "id": "XJtYkW6itYxC1qsLGtbr", "room": "A", "hour": "16:40" },
-    { "id": "ZKVz0OFf19i9AwN2GFq7", "room": "B", "hour": "16:40" },
-    { "id": "11m1hi3u0VMSmuA5Zgfz", "room": "C", "hour": "16:40" },
+    { "id": "ZKVz0OFf19i9AwN2GFq7", "room": "D", "hour": "10:00" },
+    { "id": "11m1hi3u0VMSmuA5Zgfz", "room": "B", "hour": "11:00" },
     { "id": "EOC8wmqvMNxiCpE6Xse8", "room": "D", "hour": "16:40" }
   ]
 }

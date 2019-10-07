@@ -12,24 +12,23 @@ function filterSelectedTalks(program, conferenceHall) {
   conferenceHall.talks.forEach(talk => {
     program.talks.forEach(t => {
       if (talk.id === t.id) {
-        const talkSpeakers = conferenceHall.speakers
+        const speakers = conferenceHall.speakers
           .filter(speaker => talk.speakers.includes(speaker.uid))
           .map(speaker => new Speaker(speaker));
 
-        const talkFormat = conferenceHall.formats
+        const formats = conferenceHall.formats
           .filter(format => format.id === talk.formats)
           .map(format => format.name)[0];
 
         const formattedTalk = new TalkModel(
           talk.id,
-          talk.title,
-          talk.state,
-          talk.level,
-          talk.abstract,
-          talk.categories,
-          talkFormat || t.formats,
-          talkSpeakers,
-          talk.comments,
+          t.title || talk.title,
+          t.state || talk.state,
+          t.level || talk.level,
+          t.abstract || talk.abstract,
+          t.categories || talk.categories,
+          t.formats || formats,
+          t.speakers || speakers,
           t.room,
           t.hour
         );

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Box, Heading, Text, Badge } from "@chakra-ui/core";
+import { Box, Heading, Text, Badge, Stack } from "@chakra-ui/core";
 import FAV from "../FAV";
 
 const propTypes = {};
@@ -37,7 +37,12 @@ const Card = ({ talk, to, ...props }) => {
         <Text fontSize="xs" color="gray.500" fontWeight="semibold" mb="1">
           {speakers}
         </Text>
-        {!!talk.room && <Badge variantColor="brand">Salle {talk.room}</Badge>}
+        <Stack isInline>
+          {!!talk.room && <Badge variantColor="brand">Salle {talk.room}</Badge>}
+          {talk.state === "sponsors" && (
+            <Badge variantColor="cyan">Sponsorisé</Badge>
+          )}
+        </Stack>
       </Box>
       {isTalk && (
         <FAV talk={talk} position="absolute" bottom="1" right="1" size="sm" />

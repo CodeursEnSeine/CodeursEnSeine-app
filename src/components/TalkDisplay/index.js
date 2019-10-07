@@ -27,6 +27,9 @@ const TalkDisplay = ({ talk }) => {
         <Stack isInline>
           {!!talk.room && <Badge variantColor="brand">Salle {talk.room}</Badge>}
           {!!talk.level && <Badge>{talk.level}</Badge>}
+          {talk.state === "sponsors" && (
+            <Badge variantColor="cyan">Sponsorisé</Badge>
+          )}
         </Stack>
       </Box>
 

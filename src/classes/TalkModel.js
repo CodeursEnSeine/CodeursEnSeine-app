@@ -21,7 +21,6 @@ export default class TalkModel {
     categories,
     formats,
     speakers,
-    comments,
     room,
     hour
   ) {
@@ -33,7 +32,6 @@ export default class TalkModel {
     this.categories = categories;
     this.formats = formats;
     this.speakers = speakers;
-    this.comments = comments;
     this.room = room;
     this.hour = hour;
   }
