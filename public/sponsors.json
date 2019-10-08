@@ -125,6 +125,12 @@
       "type": "partner",
       "logo": "programmez@web.png",
       "link": "https://www.programmez.com/"
+    },
+    {
+      "name": "Sticker Mule",
+      "type": "partner",
+      "logo": "sticker-mule@web.png",
+      "link": "http://stickermule.com/supports/codeurseine19-sponsorship"
     }
   ]
 }
