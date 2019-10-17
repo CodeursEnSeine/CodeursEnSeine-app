@@ -47,7 +47,14 @@ export const Topbar = (props) => {
           </Button>
         )}
         <Heading size="sm">
-          {title}
+          {!!title && (
+            <>
+              {title}
+              <Box fontSize="0.7rem" color="gray.400">
+                Codeurs en Seine &bull; #CODEURS2019
+              </Box>
+            </>
+          )}
           <Box id="topbar-title" />
         </Heading>
       </Stack>
