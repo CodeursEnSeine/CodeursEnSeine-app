@@ -65,7 +65,7 @@ export default function Program({ isFavorite = false }) {
                       favorites.includes(talk.id) && (
                         <Card
                           key={talk.id}
-                          to={`/talks/${talk.id}`}
+                          to={`/talk/${talk.id}`}
                           talk={talk}
                         />
                       )
@@ -86,7 +86,7 @@ export default function Program({ isFavorite = false }) {
               talk.state === "event" ? (
                 <Card key={talk.id} talk={talk} />
               ) : (
-                <Card key={talk.id} to={`/talks/${talk.id}`} talk={talk} />
+                <Card key={talk.id} to={`/talk/${talk.id}`} talk={talk} />
               )
             )}
         </Fragment>

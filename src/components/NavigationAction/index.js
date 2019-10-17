@@ -16,7 +16,7 @@ const defaultProps = {
   exact: false
 };
 
-const BottomNavigationAction = ({
+const NavigationAction = ({
   className,
   exact,
   to,
@@ -48,7 +48,7 @@ const BottomNavigationAction = ({
   );
 };
 
-export default BottomNavigationAction;
+export default NavigationAction;
 
-BottomNavigationAction.propTypes = propTypes;
-BottomNavigationAction.defaultProps = defaultProps;
+NavigationAction.propTypes = propTypes;
+NavigationAction.defaultProps = defaultProps;

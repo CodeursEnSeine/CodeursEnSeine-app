@@ -40,7 +40,7 @@ function Talk() {
       <FAV
         talk={talk}
         position="fixed"
-        bottom="80px"
+        bottom="8"
         right="8"
         size="lg"
         shadow="paper"
