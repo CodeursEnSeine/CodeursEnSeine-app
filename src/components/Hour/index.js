@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Heading } from "@chakra-ui/core";
+import { Heading, PseudoBox } from "@chakra-ui/core";
 
 const propTypes = {
   children: PropTypes.node
@@ -11,9 +11,11 @@ const defaultProps = {
 
 const Hour = ({ children }) => {
   return (
-    <Heading as="h4" fontSize="md" mt="6" mb="2">
-      {children}
-    </Heading>
+    <PseudoBox mt="6" mb="2" _first={{ mt: 4 }}>
+      <Heading as="h4" fontSize="md">
+        {children}
+      </Heading>
+    </PseudoBox>
   );
 };
 
