@@ -12,6 +12,16 @@ import NavigationAction from "./components/NavigationAction";
 import routes from "./routes";
 import { Topbar } from "./components/Topbar";
 
+const updateCssViewportHeight = () => {
+  let vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+};
+
+updateCssViewportHeight();
+window.addEventListener('resize', () => {
+  updateCssViewportHeight();
+});
+
 function App() {
   return (
     <React.StrictMode>
@@ -19,7 +29,14 @@ function App() {
         <CSSReset />
           <Router>
             <FavoritesContextProvider>
-              <Flex color="brand.900" minH="100vh" direction="column">
+              <Flex
+                color="brand.900"
+                direction="column"
+                h="100vh"
+                style={{
+                  height: 'calc(var(--vh, 1vh) * 100)',
+                }}
+              >
                 <Topbar zIndex="1" />
                 <Box flex="1" position="relative">
                   <Box id="scrollview" position="absolute" top="0" left="0" bottom="0" right="0" overflow="auto">
