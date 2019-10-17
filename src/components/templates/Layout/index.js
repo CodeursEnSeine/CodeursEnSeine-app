@@ -1,8 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { useHistory } from "react-router-dom";
-import { Box, Heading, Spinner, Stack, IconButton } from "@chakra-ui/core";
-import { MdArrowBack } from "react-icons/md";
+import { Box, Spinner } from "@chakra-ui/core";
 
 const propTypes = {
   title: PropTypes.string,
@@ -15,27 +13,10 @@ const defaultProps = {
 
 export default function Layout({
   children,
-  isGoBackEnable = false,
-  title,
   loading
 }) {
-  const history = useHistory();
-
-  const goBack = () => {
-    history.goBack();
-  };
-
   return (
-    <Box p="4" mb="100px">
-      <Stack isInline alignItems="center">
-        {isGoBackEnable && (
-          <IconButton isRound icon={MdArrowBack} onClick={goBack} />
-        )}
-        <Heading size="lg" mb="2">
-          {title}
-        </Heading>
-      </Stack>
-
+    <Box p="4" mb="6rem">
       {loading && (
         <Spinner
           thickness="4px"

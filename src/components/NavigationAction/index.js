@@ -36,14 +36,22 @@ const NavigationAction = ({
       flexGrow="1"
       flexBasis="100%"
       p="2"
+      pt="3"
       {...props}
       onClick={() => {
         if (to === location.pathname)
-          window.scrollTo({ behavior: "smooth", top: 0 });
+          document.getElementById('scrollview').scrollTo({ behavior: "smooth", top: 0 });
       }}
     >
-      <Box as={IconElement} size="22px" />
-      <Text fontSize="xs">{children}</Text>
+      <Box as={IconElement} size="1.6rem" />
+      <Text
+        fontSize="0.55rem"
+        fontWeight="bold"
+        textTransform="uppercase"
+        mt="1"
+      >
+        {children}
+      </Text>
     </Flex>
   );
 };

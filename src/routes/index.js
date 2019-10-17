@@ -1,18 +1,22 @@
 export default {
   program: {
+    title: 'Programme',
     pathname: '/',
-    withNavigation: true,
+    isTopLevel: true,
   },
   favorites: {
+    title: 'Favoris',
     pathname: '/favorites',
-    withNavigation: true,
+    isTopLevel: true,
   },
   info: {
+    title: 'Informations',
     pathname: '/info',
-    withNavigation: true,
+    isTopLevel: true,
   },
   talk: {
+    title: '',
     pathname: '/talk/:id',
-    withNavigation: false,
+    isTopLevel: false,
   },
 };

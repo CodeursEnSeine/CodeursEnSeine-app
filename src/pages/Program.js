@@ -19,17 +19,18 @@ export default function Program({ isFavorite = false }) {
         isFavorite ? "-fav" : ""
       }`;
 
-      console.log(IS_FAVORITE_KEY);
-      window.scrollTo(0, sessionStorage.getItem(IS_FAVORITE_KEY));
+      const scrollview = document.getElementById('scrollview');
+
+      scrollview.scrollTo(0, sessionStorage.getItem(IS_FAVORITE_KEY));
 
       const lastPosition = () => {
-        sessionStorage.setItem(IS_FAVORITE_KEY, window.scrollY);
+        sessionStorage.setItem(IS_FAVORITE_KEY, scrollview.scrollTop);
       };
 
-      window.addEventListener("scroll", lastPosition);
+      scrollview.addEventListener("scroll", lastPosition);
 
       return () => {
-        window.removeEventListener("scroll", lastPosition);
+        scrollview.removeEventListener("scroll", lastPosition);
       };
     }
   }, [loading, isFavorite]);
@@ -94,7 +95,7 @@ export default function Program({ isFavorite = false }) {
   };
 
   return (
-    <Layout loading={loading} title={isFavorite ? "Favoris" : "Programme"}>
+    <Layout loading={loading}>
       {getContent()}
     </Layout>
   );

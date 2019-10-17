@@ -10,7 +10,7 @@ const Navigation = ({ children, as, ...props }) => {
   const { pathname } = useLocation();
 
   const routesWithNav = Object.values(routes)
-    .filter(x => x.withNavigation)
+    .filter(x => x.isTopLevel)
     .map(x => x.pathname);
 
   if (!routesWithNav.includes(pathname)) {
@@ -20,11 +20,6 @@ const Navigation = ({ children, as, ...props }) => {
   return (
     <Flex
       as="nav"
-      position="fixed"
-      bottom="-1px"
-      left="0"
-      right="0"
-      h="56px"
       backgroundColor="brand.700"
       {...props}
     >

@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
+import ReactDOM from 'react-dom';
 import { useParams } from "react-router-dom";
+import { Heading, Box, Stack, Badge } from "@chakra-ui/core";
 import Layout from "../components/templates/Layout";
 import TalkDisplay from "../components/TalkDisplay";
 import FAV from "../components/FAV";
@@ -17,6 +19,14 @@ function Talk() {
   const [talks] = useTalks();
   const { id } = useParams();
 
+  const typeAndHour = () => {
+    if (talk.formats) {
+      return `${talk.formats} - ${talk.hour}`;
+    }
+
+    return talk.hour;
+  };
+
   useEffect(() => {
     async function fetchData() {
       if (talks.length !== 0) {
@@ -29,8 +39,28 @@ function Talk() {
     fetchData();
   }, [id, talks]);
 
+  const topbarTitlePortal = document.getElementById('topbar-title');
+
+
   return (
-    <Layout loading={loading} title={talk.title} isGoBackEnable>
+    <Layout loading={loading} isGoBackEnable>
+      {topbarTitlePortal && ReactDOM.createPortal((
+        <Box>
+          <Heading as="h4" fontSize="md" mb="1">
+            {typeAndHour()}
+          </Heading>
+          <Stack isInline>
+            {!!talk.room && <Badge variantColor="brand">Salle {talk.room}</Badge>}
+            {talk.state === "sponsors" && (
+              <Badge variantColor="cyan">Sponsorisé</Badge>
+            )}
+          </Stack>
+        </Box>
+      ), topbarTitlePortal)}
+      <Heading size="lg" mb="2">
+        {talk.title}
+      </Heading>
+      {!!talk.level && <Badge mb="2">{talk.level}</Badge>}
       <TalkDisplay talk={talk} />
       {talk.speakers &&
         talk.speakers.map(speaker => (
