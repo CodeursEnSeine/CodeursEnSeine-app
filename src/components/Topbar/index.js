@@ -12,6 +12,7 @@ import {
 } from "@chakra-ui/core";
 import logo from "./logo.svg";
 import routes from "../../routes";
+import backToTop from "../../helpers/backToTop";
 
 const propTypes = {};
 const defaultProps = {};
@@ -31,7 +32,7 @@ export const Topbar = props => {
     <Flex backgroundColor="white" shadow="md" minH="3.6rem" {...props}>
       <Stack isInline px="4" py="2" align="center" spacing="4">
         {isTopLevel && (
-          <AspectRatioBox w="2.2rem" ratio="1">
+          <AspectRatioBox w="2.2rem" ratio="1" onClick={() => backToTop()}>
             <Image
               src={logo}
               rounded="md"

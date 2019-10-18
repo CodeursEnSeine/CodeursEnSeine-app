@@ -11,6 +11,7 @@ import { FavoritesContextProvider } from "./contexts/FavoritesContext";
 import NavigationAction from "./components/NavigationAction";
 import routes from "./routes";
 import { Topbar } from "./components/Topbar";
+import { SCROLLVIEW_ID } from "./helpers/backToTop";
 
 const updateCssViewportHeight = () => {
   let vh = window.innerHeight * 0.01;
@@ -40,7 +41,7 @@ function App() {
               <Topbar zIndex="1" />
               <Box flex="1" position="relative">
                 <Box
-                  id="scrollview"
+                  id={SCROLLVIEW_ID}
                   position="absolute"
                   top="0"
                   left="0"

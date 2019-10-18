@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { useLocation, Link } from "react-router-dom";
 import { Flex, Text, Box } from "@chakra-ui/core";
+import backToTop from "../helpers/backToTop";
 
 const propTypes = {
   className: PropTypes.oneOfType([
@@ -39,10 +40,9 @@ const NavigationAction = ({
       pt="3"
       {...props}
       onClick={() => {
-        if (to === location.pathname)
-          document
-            .getElementById("scrollview")
-            .scrollTo({ behavior: "smooth", top: 0 });
+        if (to === location.pathname) {
+          backToTop();
+        }
       }}
     >
       <Box as={IconElement} size="1.6rem" />
