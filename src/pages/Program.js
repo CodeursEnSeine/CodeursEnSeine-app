@@ -19,7 +19,7 @@ export default function Program({ isFavorite = false }) {
         isFavorite ? "-fav" : ""
       }`;
 
-      const scrollview = document.getElementById('scrollview');
+      const scrollview = document.getElementById("scrollview");
 
       scrollview.scrollTo(0, sessionStorage.getItem(IS_FAVORITE_KEY));
 
@@ -94,9 +94,5 @@ export default function Program({ isFavorite = false }) {
       ));
   };
 
-  return (
-    <Layout loading={loading}>
-      {getContent()}
-    </Layout>
-  );
+  return <Layout loading={loading}>{getContent()}</Layout>;
 }

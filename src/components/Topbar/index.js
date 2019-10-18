@@ -1,13 +1,22 @@
-import React from 'react';
-import { useHistory, useLocation } from 'react-router-dom';
-import { Box, AspectRatioBox, Image, Flex, Stack, Heading, Button, Icon } from '@chakra-ui/core';
-import logo from './logo.svg';
-import routes from '../../routes';
+import React from "react";
+import { useHistory, useLocation } from "react-router-dom";
+import {
+  Box,
+  AspectRatioBox,
+  Image,
+  Flex,
+  Stack,
+  Heading,
+  Button,
+  Icon
+} from "@chakra-ui/core";
+import logo from "./logo.svg";
+import routes from "../../routes";
 
 const propTypes = {};
 const defaultProps = {};
 
-export const Topbar = (props) => {
+export const Topbar = props => {
   const { pathname } = useLocation();
   const history = useHistory();
 
@@ -15,15 +24,11 @@ export const Topbar = (props) => {
     history.goBack();
   };
 
-  const { isTopLevel, title } = (Object.values(routes).find(x => x.pathname === pathname) || {});
+  const { isTopLevel, title } =
+    Object.values(routes).find(x => x.pathname === pathname) || {};
 
   return (
-    <Flex
-      backgroundColor="white"
-      shadow="md"
-      minH="3.6rem"
-      {...props}
-    >
+    <Flex backgroundColor="white" shadow="md" minH="3.6rem" {...props}>
       <Stack isInline px="4" py="2" align="center" spacing="4">
         {isTopLevel && (
           <AspectRatioBox w="2.2rem" ratio="1">

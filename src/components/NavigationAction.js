@@ -40,7 +40,9 @@ const NavigationAction = ({
       {...props}
       onClick={() => {
         if (to === location.pathname)
-          document.getElementById('scrollview').scrollTo({ behavior: "smooth", top: 0 });
+          document
+            .getElementById("scrollview")
+            .scrollTo({ behavior: "smooth", top: 0 });
       }}
     >
       <Box as={IconElement} size="1.6rem" />

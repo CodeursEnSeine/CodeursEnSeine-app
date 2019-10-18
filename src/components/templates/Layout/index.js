@@ -11,10 +11,7 @@ const defaultProps = {
   loading: false
 };
 
-export default function Layout({
-  children,
-  loading
-}) {
+export default function Layout({ children, loading }) {
   return (
     <Box p="4" mb="6rem">
       {loading && (

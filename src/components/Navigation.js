@@ -1,7 +1,7 @@
 import React from "react";
-import { useLocation } from 'react-router-dom';
+import { useLocation } from "react-router-dom";
 import { Flex } from "@chakra-ui/core";
-import routes from "../../routes";
+import routes from "../routes";
 
 const propTypes = {};
 const defaultProps = {};
@@ -14,15 +14,11 @@ const Navigation = ({ children, as, ...props }) => {
     .map(x => x.pathname);
 
   if (!routesWithNav.includes(pathname)) {
-    return '';
+    return "";
   }
 
   return (
-    <Flex
-      as="nav"
-      backgroundColor="brand.700"
-      {...props}
-    >
+    <Flex as="nav" backgroundColor="brand.700" {...props}>
       {children}
     </Flex>
   );

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import ReactDOM from 'react-dom';
+import ReactDOM from "react-dom";
 import { useParams } from "react-router-dom";
 import { Heading, Box, Stack, Badge } from "@chakra-ui/core";
 import Layout from "../components/templates/Layout";
@@ -39,24 +39,27 @@ function Talk() {
     fetchData();
   }, [id, talks]);
 
-  const topbarTitlePortal = document.getElementById('topbar-title');
-
+  const topbarTitlePortal = document.getElementById("topbar-title");
 
   return (
     <Layout loading={loading} isGoBackEnable>
-      {topbarTitlePortal && ReactDOM.createPortal((
-        <Box>
-          <Heading as="h4" fontSize="md" mb="1">
-            {typeAndHour()}
-          </Heading>
-          <Stack isInline>
-            {!!talk.room && <Badge variantColor="brand">Salle {talk.room}</Badge>}
-            {talk.state === "sponsors" && (
-              <Badge variantColor="cyan">Sponsorisé</Badge>
-            )}
-          </Stack>
-        </Box>
-      ), topbarTitlePortal)}
+      {topbarTitlePortal &&
+        ReactDOM.createPortal(
+          <Box>
+            <Heading as="h4" fontSize="md" mb="1">
+              {typeAndHour()}
+            </Heading>
+            <Stack isInline>
+              {!!talk.room && (
+                <Badge variantColor="brand">Salle {talk.room}</Badge>
+              )}
+              {talk.state === "sponsors" && (
+                <Badge variantColor="cyan">Sponsorisé</Badge>
+              )}
+            </Stack>
+          </Box>,
+          topbarTitlePortal
+        )}
       <Heading size="lg" mb="2">
         {talk.title}
       </Heading>
