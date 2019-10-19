@@ -1,6 +1,6 @@
 import React from "react";
 import { ThemeProvider, CSSReset, Box, Flex } from "@chakra-ui/core";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { MdFavorite, MdToday, MdLocationOn } from "react-icons/md";
 import Navigation from "./components/Navigation";
 import Program from "./pages/Program";
@@ -12,6 +12,7 @@ import NavigationAction from "./components/NavigationAction";
 import routes from "./routes";
 import { Topbar } from "./components/Topbar";
 import { SCROLLVIEW_ID } from "./helpers/backToTop";
+import { NotFound404 } from "./pages/NotFound404";
 
 const updateCssViewportHeight = () => {
   let vh = window.innerHeight * 0.01;
@@ -49,20 +50,23 @@ function App() {
                   right="0"
                   overflow="auto"
                 >
-                  <Route
-                    exact
-                    path={routes.program.pathname}
-                    component={Program}
-                  />
-                  <Route exact path={routes.favorites.pathname}>
-                    <Program isFavorite />
-                  </Route>
-                  <Route exact path={routes.info.pathname}>
-                    <Map />
-                  </Route>
-                  <Route exact path={routes.talk.pathname}>
-                    <Talk />
-                  </Route>
+                  <Switch>
+                    <Route exact path={routes.program.pathname}>
+                      <Program />
+                    </Route>
+                    <Route exact path={routes.favorites.pathname}>
+                      <Program isFavorite />
+                    </Route>
+                    <Route exact path={routes.info.pathname}>
+                      <Map />
+                    </Route>
+                    <Route exact path={routes.talk.pathname}>
+                      <Talk />
+                    </Route>
+                    <Route path={routes.notFound.pathname}>
+                      <NotFound404 />
+                    </Route>
+                  </Switch>
                 </Box>
               </Box>
               <Navigation>

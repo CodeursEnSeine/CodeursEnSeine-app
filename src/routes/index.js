@@ -18,5 +18,10 @@ export default {
     title: "",
     pathname: "/talk/:id",
     isTopLevel: false
+  },
+  notFound: {
+    title: "404 Not Found",
+    pathname: "*",
+    isTopLevel: true
   }
 };

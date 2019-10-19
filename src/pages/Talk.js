@@ -9,10 +9,6 @@ import { useTalks } from "../hooks/useTalks";
 import SpeakerDisplay from "../components/SpeakerDisplay";
 import { SponsorsDisplay } from "../components/SponsorsDisplay";
 
-const propTypes = {};
-
-const defaultProps = {};
-
 function Talk() {
   const [talk, setTalk] = useState({});
   const [loading, setLoading] = useState(true);
@@ -42,7 +38,7 @@ function Talk() {
   const topbarTitlePortal = document.getElementById("topbar-title");
 
   return (
-    <Layout loading={loading} isGoBackEnable>
+    <Layout loading={loading}>
       {topbarTitlePortal &&
         ReactDOM.createPortal(
           <Box>
@@ -81,8 +77,5 @@ function Talk() {
     </Layout>
   );
 }
-
-Talk.propTypes = propTypes;
-Talk.defaultProps = defaultProps;
 
 export default Talk;
