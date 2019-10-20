@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Box, Spinner } from "@chakra-ui/core";
+import { Box } from "@chakra-ui/core";
 
 const propTypes = {
   title: PropTypes.string,

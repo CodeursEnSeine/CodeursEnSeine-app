@@ -1,5 +1,5 @@
 import React from "react";
-import { useHistory, useLocation } from "react-router-dom";
+import { Link, useHistory, useLocation } from "react-router-dom";
 import {
   Box,
   AspectRatioBox,
@@ -22,10 +22,22 @@ export const Topbar = props => {
   const history = useHistory();
 
   const goBack = () => {
-    history.goBack();
-  };
+    const isPop = history.action === "POP";
 
-  console.log(history.length);
+    return (
+      <Button
+        aria-label="Back"
+        variant="ghost"
+        ml="-0.6rem"
+        px="0"
+        as={isPop ? "a" : "button"}
+        onClick={isPop ? null : () => history.goBack()}
+        href="/"
+      >
+        <Icon name="arrow-back" size="1.4rem" />
+      </Button>
+    );
+  };
 
   const { isTopLevel, title } =
     Object.values(routes).find(x => x.pathname === pathname) || {};
@@ -43,17 +55,7 @@ export const Topbar = props => {
             />
           </AspectRatioBox>
         )}
-        {!isTopLevel && (
-          <Button
-            aria-label="Back"
-            variant="ghost"
-            ml="-0.6rem"
-            px="0"
-            onClick={() => goBack()}
-          >
-            <Icon name="arrow-back" size="1.4rem" />
-          </Button>
-        )}
+        {!isTopLevel && goBack()}
         <Heading size="sm">
           {!!title && (
             <>
