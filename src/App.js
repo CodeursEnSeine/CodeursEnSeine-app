@@ -1,7 +1,7 @@
 import React from "react";
 import { ThemeProvider, CSSReset, Box, Flex } from "@chakra-ui/core";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { MdFavorite, MdToday, MdLocationOn } from "react-icons/md";
+import { MdFavorite, MdToday, MdInfo } from "react-icons/md";
 import Navigation from "./components/Navigation";
 import Program from "./pages/Program";
 import Map from "./pages/Map";
@@ -84,7 +84,7 @@ function App() {
                 </NavigationAction>
                 <NavigationAction
                   to={routes.info.pathname}
-                  iconElement={MdLocationOn}
+                  iconElement={MdInfo}
                 >
                   Info
                 </NavigationAction>
