@@ -11,19 +11,10 @@ const defaultProps = {
   loading: false
 };
 
-export default function Layout({ children, loading }) {
+export default function Layout({ children }) {
   return (
     <Box p="4" mb="6rem">
-      {loading && (
-        <Spinner
-          thickness="4px"
-          speed="0.65s"
-          emptyColor="brand.200"
-          color="brand.600"
-          size="md"
-        />
-      )}
-      {!loading && <Box>{children}</Box>}
+      {children}
     </Box>
   );
 }

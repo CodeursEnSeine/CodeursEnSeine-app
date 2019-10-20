@@ -25,6 +25,8 @@ export const Topbar = props => {
     history.goBack();
   };
 
+  console.log(history.length);
+
   const { isTopLevel, title } =
     Object.values(routes).find(x => x.pathname === pathname) || {};
 

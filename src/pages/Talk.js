@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
 import ReactDOM from "react-dom";
 import { useParams } from "react-router-dom";
-import { Heading, Box, Stack, Badge } from "@chakra-ui/core";
+import { AspectRatioBox, Heading, Box, Stack, Badge } from "@chakra-ui/core";
 import Layout from "../components/templates/Layout";
 import TalkDisplay from "../components/TalkDisplay";
 import FAV from "../components/FAV";
 import { useTalks } from "../hooks/useTalks";
 import SpeakerDisplay from "../components/SpeakerDisplay";
 import { SponsorsDisplay } from "../components/SponsorsDisplay";
+import { Skeleton } from "../components/Skeleton";
 
 function Talk() {
   const [talk, setTalk] = useState({});
@@ -38,8 +39,50 @@ function Talk() {
   const topbarTitlePortal = document.getElementById("topbar-title");
 
   return (
-    <Layout loading={loading}>
-      {topbarTitlePortal &&
+    <Layout>
+      {loading && (
+        <>
+          <Skeleton
+            height="1.2rem"
+            width="15rem"
+            backgroundColor="brand.900"
+            mb="2"
+          />
+          {[...Array(10).keys()].map(key => (
+            <Skeleton key={key} height="1.1rem" width="100%" />
+          ))}
+          <Box my="8">
+            <Stack isInline spacing="4" mb="4">
+              <AspectRatioBox
+                ratio={1}
+                width={100}
+                backgroundColor="gray.100"
+                rounded="md"
+                shadow="paper"
+                overflow="hidden"
+              >
+                <Skeleton height="100%" width="100%" />
+              </AspectRatioBox>
+              )}
+              <Box>
+                <Box mb="2">
+                  <Skeleton height="1rem" width="3rem" />
+                  <Skeleton height="1rem" width="2rem" />
+                </Box>
+                <Stack isInline>
+                  <Skeleton height="1rem" width="2rem" />
+                  <Skeleton height="1rem" width="2rem" />
+                </Stack>
+              </Box>
+            </Stack>
+            {[...Array(10).keys()].map(key => (
+              <Skeleton key={key} height="1.1rem" width="100%" />
+            ))}
+          </Box>
+        </>
+      )}
+      {!loading &&
+        topbarTitlePortal &&
         ReactDOM.createPortal(
           <Box>
             <Heading as="h4" fontSize="md" mb="1">

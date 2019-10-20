@@ -1,4 +1,5 @@
 import React, { Fragment, useEffect } from "react";
+import { Box } from "@chakra-ui/core";
 import { useFavoriteContext } from "../contexts/FavoritesContext";
 import Layout from "../components/templates/Layout";
 import Card from "../components/Card";
@@ -6,6 +7,7 @@ import { useTalks } from "../hooks/useTalks";
 import { groupBy } from "lodash";
 import Hour from "../components/Hour";
 import { sortHours } from "../helpers/sortHours";
+import { CardSkeleton } from "../components/CardSkeleton";
 
 export const PROGRAM_SCROLL_OFFSET_KEY = "scroll-offset";
 
@@ -94,5 +96,10 @@ export default function Program({ isFavorite = false }) {
       ));
   };
 
-  return <Layout loading={loading}>{getContent()}</Layout>;
+  return (
+    <Layout>
+      {loading && [...Array(20).keys()].map(key => <CardSkeleton key={key} />)}
+      {!loading && <Box>{getContent()}</Box>}
+    </Layout>
+  );
 }
