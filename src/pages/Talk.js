@@ -10,7 +10,7 @@ import SpeakerDisplay from "../components/SpeakerDisplay";
 import { SponsorsDisplay } from "../components/SponsorsDisplay";
 import { Skeleton } from "../components/Skeleton";
 
-function Talk() {
+export const Talk = () => {
   const [talk, setTalk] = useState({});
   const [loading, setLoading] = useState(true);
   const [talks] = useTalks();
@@ -119,6 +119,4 @@ function Talk() {
       />
     </Layout>
   );
-}
-
-export default Talk;
+};

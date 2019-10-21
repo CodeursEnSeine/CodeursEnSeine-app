@@ -3,10 +3,10 @@ import { ThemeProvider, CSSReset, Box, Flex } from "@chakra-ui/core";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { MdFavorite, MdToday, MdInfo } from "react-icons/md";
 import Navigation from "./components/Navigation";
-import Program from "./pages/Program";
-import Map from "./pages/Map";
+import { Program } from "./pages/Program";
+import { Informations } from "./pages/Informations";
 import { themeCES } from "./themes/ces";
-import Talk from "./pages/Talk";
+import { Talk } from "./pages/Talk";
 import { FavoritesContextProvider } from "./contexts/FavoritesContext";
 import NavigationAction from "./components/NavigationAction";
 import routes from "./routes";
@@ -58,7 +58,7 @@ function App() {
                       <Program isFavorite />
                     </Route>
                     <Route exact path={routes.info.pathname}>
-                      <Map />
+                      <Informations />
                     </Route>
                     <Route exact path={routes.talk.pathname}>
                       <Talk />

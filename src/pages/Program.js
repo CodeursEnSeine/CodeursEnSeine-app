@@ -11,7 +11,7 @@ import { CardSkeleton } from "../components/CardSkeleton";
 
 export const PROGRAM_SCROLL_OFFSET_KEY = "scroll-offset";
 
-export default function Program({ isFavorite = false }) {
+export function Program({ isFavorite = false }) {
   const [talks, loading] = useTalks();
   const { favorites } = useFavoriteContext();
 
