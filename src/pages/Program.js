@@ -8,6 +8,7 @@ import { groupBy } from "lodash";
 import Hour from "../components/Hour";
 import { sortHours } from "../helpers/sortHours";
 import { CardSkeleton } from "../components/CardSkeleton";
+import { SCROLLVIEW_ID } from "../helpers/backToTop";
 
 export const PROGRAM_SCROLL_OFFSET_KEY = "scroll-offset";
 
@@ -21,7 +22,7 @@ export function Program({ isFavorite = false }) {
         isFavorite ? "-fav" : ""
       }`;
 
-      const scrollview = document.getElementById("scrollview");
+      const scrollview = document.getElementById(SCROLLVIEW_ID);
 
       scrollview.scrollTo(0, sessionStorage.getItem(IS_FAVORITE_KEY));
 

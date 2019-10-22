@@ -9,12 +9,18 @@ import { useTalks } from "../hooks/useTalks";
 import SpeakerDisplay from "../components/SpeakerDisplay";
 import { SponsorsDisplay } from "../components/SponsorsDisplay";
 import { Skeleton } from "../components/Skeleton";
+import { SCROLLVIEW_ID } from "../helpers/backToTop";
 
 export const Talk = () => {
   const [talk, setTalk] = useState({});
   const [loading, setLoading] = useState(true);
   const [talks] = useTalks();
   const { id } = useParams();
+
+  const scrollview = document.getElementById(SCROLLVIEW_ID);
+  if (scrollview) {
+    scrollview.scrollTo(0, 0);
+  }
 
   const typeAndHour = () => {
     if (talk.formats) {
