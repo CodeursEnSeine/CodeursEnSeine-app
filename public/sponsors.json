@@ -67,6 +67,18 @@
       "link": "http://www.enovea.net/"
     },
     {
+      "name": "MAE",
+      "type": "silver",
+      "logo": "mae@web.png",
+      "link": "https://mae.fr/"
+    },
+    {
+      "name": "Altitude Infrastructure",
+      "type": "silver",
+      "logo": "altitude@web.png",
+      "link": "http://www.altitudeinfrastructure.fr/"
+    },
+    {
       "name": "Digit",
       "type": "bronze",
       "logo": "digit@web.jpg",
@@ -113,6 +125,12 @@
       "type": "bronze",
       "logo": "docapost-agility@web.png",
       "link": "https://www.docapost-agility.fr/"
+    },
+    {
+      "name": "FTEL",
+      "type": "bronze",
+      "logo": "ftel@web.png",
+      "link": "http://ftel.fr/"
     },
     {
       "name": "WeLoveDevs",
