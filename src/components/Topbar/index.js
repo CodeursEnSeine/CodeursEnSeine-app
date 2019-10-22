@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { useHistory, useLocation } from "react-router-dom";
 import {
   Box,
@@ -14,19 +14,55 @@ import logo from "./logo.svg";
 import routes from "../../routes";
 import backToTop from "../../helpers/backToTop";
 
-const propTypes = {};
-const defaultProps = {};
+const PWA_INSTALLATION_REFUSAL = "CES2019-PWA-INSTALLATION-REFUSAL";
 
 export const Topbar = props => {
+  const [doesShowInstallationButton, setDoesShowInstallationButton] = useState(
+    false
+  );
+  const deferredPrompt = useRef();
+
   const { pathname } = useLocation();
   const history = useHistory();
+
+  useEffect(() => {
+    const beforeInstallPrompt = e => {
+      deferredPrompt.current = e;
+      if (localStorage.getItem(PWA_INSTALLATION_REFUSAL) !== "1") {
+        setDoesShowInstallationButton(true);
+      }
+    };
+
+    window.addEventListener("beforeinstallprompt", beforeInstallPrompt);
+
+    return () => {
+      window.removeEventListener("beforeinstallprompt", beforeInstallPrompt);
+    };
+  }, []);
+
+  const handleInstall = () => {
+    if (
+      deferredPrompt.current &&
+      localStorage.getItem(PWA_INSTALLATION_REFUSAL) !== "1"
+    ) {
+      deferredPrompt.current.prompt();
+      deferredPrompt.current.userChoice.then(choiceResult => {
+        setDoesShowInstallationButton(false);
+        deferredPrompt.current = null;
+        if (choiceResult.outcome !== "accepted") {
+          localStorage.setItem(PWA_INSTALLATION_REFUSAL, "1");
+          setDoesShowInstallationButton(false);
+        }
+      });
+    }
+  };
 
   const goBack = () => {
     const isPop = history.action === "POP";
 
     return (
       <Button
-        aria-label="Back"
+        aria-label="Retour"
         variant="ghost"
         ml="-0.6rem"
         px="0"
@@ -67,10 +103,19 @@ export const Topbar = props => {
           )}
           <Box id="topbar-title" />
         </Heading>
+        {doesShowInstallationButton && (
+          <Button
+            position="absolute"
+            right="4"
+            aria-label="Install"
+            variant="ghost"
+            px="0"
+            onClick={handleInstall}
+          >
+            <Icon name="add" />
+          </Button>
+        )}
       </Stack>
     </Flex>
   );
 };
-
-Topbar.propTypes = propTypes;
-Topbar.defaultProps = defaultProps;
