@@ -7,7 +7,7 @@ import TalkDisplay from "../components/TalkDisplay";
 import FAV from "../components/FAV";
 import { useTalks } from "../hooks/useTalks";
 import SpeakerDisplay from "../components/SpeakerDisplay";
-import { SponsorsDisplay } from "../components/SponsorsDisplay";
+import { SponsorsDisplay } from "../components/Sponsors/SponsorsDisplay";
 import { Skeleton } from "../components/Skeleton";
 import { SCROLLVIEW_ID } from "../helpers/backToTop";
 

@@ -1,29 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Heading, Stack, Box, AspectRatioBox, Grid } from "@chakra-ui/core";
-import Cache from "../services/pwa/Cache";
+import { sponsors } from "./sponsors.json";
 
 const BASE_IMAGE =
   "https://www.codeursenseine.com/images/edition2019/sponsors/";
 
 export const SponsorsDisplay = () => {
-  const [sponsors, setSponsors] = useState([]);
-
-  useEffect(() => {
-    const getSponsors = async () => {
-      const response = await fetch("/sponsors.json");
-      const json = await response.json();
-
-      const cache = await Cache.get();
-      if (cache) {
-        cache.put(new Request("/sponsors.json"), new Response(json));
-      }
-
-      setSponsors(json.sponsors);
-    };
-
-    getSponsors();
-  }, []);
-
   return (
     <Stack>
       <Box>
