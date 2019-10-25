@@ -79,6 +79,12 @@
       "link": "http://www.altitudeinfrastructure.fr/"
     },
     {
+      "name": "Microsoft",
+      "type": "silver",
+      "logo": "microsoft@web.png",
+      "link": "https://developer.microsoft.com/en-us/advocates/index.html"
+    },
+    {
       "name": "Digit",
       "type": "bronze",
       "logo": "digit@web.jpg",
