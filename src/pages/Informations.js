@@ -1,6 +1,6 @@
 import React from "react";
 import { Heading, Box, Text, Stack } from "@chakra-ui/core";
-import Layout from "../components/templates/Layout";
+import { Layout } from "../components/templates/Layout";
 import { initScrollView } from "../helpers/backToTop";
 
 export function Informations() {

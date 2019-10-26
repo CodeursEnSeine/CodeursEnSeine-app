@@ -1,7 +1,7 @@
 import React, { Fragment, useEffect } from "react";
 import { Box } from "@chakra-ui/core";
 import { useFavoriteContext } from "../contexts/FavoritesContext";
-import Layout from "../components/templates/Layout";
+import { Layout } from "../components/templates/Layout";
 import Card from "../components/Card";
 import { useTalks } from "../hooks/useTalks";
 import { groupBy } from "lodash";

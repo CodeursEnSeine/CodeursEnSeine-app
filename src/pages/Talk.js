@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import ReactDOM from "react-dom";
 import { useParams } from "react-router-dom";
 import { AspectRatioBox, Heading, Box, Stack, Badge } from "@chakra-ui/core";
-import Layout from "../components/templates/Layout";
+import { Layout } from "../components/templates/Layout";
 import TalkDisplay from "../components/TalkDisplay";
 import FAV from "../components/FAV";
 import { useTalks } from "../hooks/useTalks";

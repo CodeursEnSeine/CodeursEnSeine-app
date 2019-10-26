@@ -19,6 +19,11 @@ export default {
     pathname: "/talk/:id",
     isTopLevel: false
   },
+  sponsors: {
+    title: "Sponsors",
+    pathname: "/sponsors",
+    isTopLevel: true
+  },
   notFound: {
     title: "404 Not Found",
     pathname: "*",

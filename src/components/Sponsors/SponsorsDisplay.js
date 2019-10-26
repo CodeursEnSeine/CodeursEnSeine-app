@@ -2,7 +2,7 @@ import React from "react";
 import { Heading, Stack, Box, AspectRatioBox, Grid } from "@chakra-ui/core";
 import { sponsors } from "./sponsors.json";
 
-const BASE_IMAGE =
+export const BASE_IMAGE =
   "https://www.codeursenseine.com/images/edition2019/sponsors/";
 
 export const SponsorsDisplay = () => {
