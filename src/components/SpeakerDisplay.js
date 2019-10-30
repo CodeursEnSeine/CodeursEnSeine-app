@@ -60,7 +60,7 @@ const SpeakerDisplay = ({ speaker }) => {
               <Box>
                 <Button
                   as="a"
-                  href={`https://twitter.com/${speaker.twitter}`}
+                  href={`https://twitter.com/${speaker.twitter.slice(1, speaker.twitter.length)}`}
                   size="xs"
                 >
                   Twitter
