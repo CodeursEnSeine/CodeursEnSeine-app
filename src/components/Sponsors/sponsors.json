@@ -139,6 +139,12 @@
       "link": "http://ftel.fr/"
     },
     {
+      "name": "SII",
+      "type": "bronze",
+      "logo": "sii@web.png",
+      "link": "http://www.groupe-sii.com/"
+    },
+    {
       "name": "WeLoveDevs",
       "type": "partner",
       "logo": "welovedevs@web.png",
