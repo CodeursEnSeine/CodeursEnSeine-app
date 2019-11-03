@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Layout } from "../components/templates/Layout";
 import { sponsors } from "../components/Sponsors/sponsors.json";
 import {
@@ -12,6 +12,7 @@ import {
   Icon
 } from "@chakra-ui/core";
 import { BASE_IMAGE } from "../components/Sponsors/SponsorsDisplay";
+import { initScrollView } from "../helpers/backToTop";
 
 const mapping = {
   gold: "yellow",
@@ -57,6 +58,10 @@ const Card = ({ sponsor }) => (
 );
 
 export const Sponsors = () => {
+  useEffect(() => {
+    initScrollView();
+  }, []);
+
   return (
     <Layout>
       <Box
