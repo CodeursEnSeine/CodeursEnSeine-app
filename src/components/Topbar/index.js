@@ -10,6 +10,7 @@ import {
   Button,
   Icon
 } from "@chakra-ui/core";
+import { FaDownload } from "react-icons/fa";
 import logo from "./logo.svg";
 import routes from "../../routes";
 import backToTop from "../../helpers/backToTop";
@@ -41,20 +42,11 @@ export const Topbar = props => {
   }, []);
 
   const handleInstall = () => {
-    if (
-      deferredPrompt.current &&
-      localStorage.getItem(PWA_INSTALLATION_REFUSAL) !== "1"
-    ) {
-      deferredPrompt.current.prompt();
-      deferredPrompt.current.userChoice.then(choiceResult => {
-        setDoesShowInstallationButton(false);
-        deferredPrompt.current = null;
-        if (choiceResult.outcome !== "accepted") {
-          localStorage.setItem(PWA_INSTALLATION_REFUSAL, "1");
-          setDoesShowInstallationButton(false);
-        }
-      });
-    }
+    deferredPrompt.current.prompt();
+    deferredPrompt.current.userChoice.then(_ => {
+      setDoesShowInstallationButton(false);
+      deferredPrompt.current = null;
+    });
   };
 
   const goBack = () => {
@@ -112,7 +104,7 @@ export const Topbar = props => {
             px="0"
             onClick={handleInstall}
           >
-            <Icon name="add" />
+            <Box as={FaDownload} size="1.0rem" />
           </Button>
         )}
       </Stack>

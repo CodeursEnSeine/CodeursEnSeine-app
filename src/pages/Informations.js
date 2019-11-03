@@ -1,20 +1,39 @@
-import React from "react";
-import { Heading, Box, Text, Stack } from "@chakra-ui/core";
+import React, { useEffect } from "react";
+import { Heading, Box, Text, Stack, Icon } from "@chakra-ui/core";
 import { Layout } from "../components/templates/Layout";
 import { initScrollView } from "../helpers/backToTop";
 
 export function Informations() {
-  initScrollView();
+  useEffect(() => {
+    initScrollView();
+  }, []);
 
   return (
     <Layout>
-      <Heading as="h4" size="sm" mb="4">
+      <Box
+        borderWidth={1}
+        rounded="lg"
+        color="brand.800"
+        display="flex"
+        alignItems="center"
+        justifyContent="center"
+        padding={2}
+        as="a"
+        href="https://www.codeursenseine.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        my={4}
+      >
+        Toutes les informations sont disponible sur le site de Codeurs En Seine
+        <Icon ml={2} name="external-link" />
+      </Box>
+      <Heading as="h4" size="sm" mb={4}>
         Comment venir ?
       </Heading>
 
-      <Stack spacing="4">
+      <Stack spacing={4}>
         <Box>
-          <Text fontSize="1.4rem" mb="1">
+          <Text fontSize="1.4rem" mb={1}>
             Lieu de l'événement
           </Text>
           <Text>
@@ -43,6 +62,8 @@ export function Informations() {
             <a
               href="https://www.openstreetmap.org/?mlat=49.44770&amp;mlon=1.06314#map=17/49.44770/1.06314"
               title="Lien vers le site d'OpenStreetMap pour afficher la carte en plus grande"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Afficher une carte plus grande
             </a>
@@ -50,7 +71,7 @@ export function Informations() {
         </Box>
 
         <Box>
-          <Text fontSize="1.4rem" mb="2">
+          <Text fontSize="1.4rem" mb={2}>
             Venir en vélo{" "}
             <span role="img" aria-label="Emoji de vélo">
               🚲
@@ -59,13 +80,18 @@ export function Informations() {
           <Text fontWeight="bold">
             Il existe plusieurs parking à vélo autour du Kindarena
           </Text>
-          <a href="https://www.cyclosm.org/#map=17/49.44759/1.06432/cyclosm">
-            Lien vers CyclOSM
+          <a
+            href="https://www.cyclosm.org/#map=17/49.44759/1.06432/cyclosm"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Il est possible de les consulter sur CyclOSM
+            <Icon ml={2} name="external-link" />
           </a>
         </Box>
 
         <Box>
-          <Text fontSize="1.4rem" mb="2">
+          <Text fontSize="1.4rem" mb={2}>
             Venir en transport public{" "}
             <span role="img" aria-label="Emoji de train">
               🚆
@@ -76,7 +102,7 @@ export function Informations() {
         </Box>
 
         <Box>
-          <Text fontSize="1.4rem" mb="2">
+          <Text fontSize="1.4rem" mb={2}>
             Venir en voiture{" "}
             <span role="img" aria-label="Emoji de voiture">
               🚗

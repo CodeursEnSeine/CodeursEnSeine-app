@@ -24,6 +24,11 @@ export default {
     pathname: "/sponsors",
     isTopLevel: true
   },
+  sponsorsDetails: {
+    title: "",
+    pathname: "/sponsors/:name",
+    itTopLevel: false
+  },
   notFound: {
     title: "404 Not Found",
     pathname: "*",
