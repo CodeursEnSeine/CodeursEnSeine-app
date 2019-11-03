@@ -121,12 +121,12 @@
         {
           "id": "CDESLANDES",
           "displayName": "Cédric Deslandes",
-          "photoURL": "x"
+          "photoURL": "/images/speakers/cedric-deslandes.jpg"
         },
         {
           "id": "ELESUEUR",
           "displayName": "Elie Lesueur",
-          "photoURL": "x"
+          "photoURL": "/images/speakers/elie-lesueur.jpg"
         }
       ]
     },
