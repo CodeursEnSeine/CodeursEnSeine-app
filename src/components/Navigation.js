@@ -18,7 +18,12 @@ const Navigation = ({ children, as, ...props }) => {
   }
 
   return (
-    <Flex as="nav" backgroundColor="brand.700" {...props}>
+    <Flex
+      as="nav"
+      backgroundColor="brand.700"
+      paddingBottom="env(safe-area-inset-bottom)"
+      {...props}
+    >
       {children}
     </Flex>
   );
