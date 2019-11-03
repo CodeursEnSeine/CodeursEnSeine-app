@@ -2,14 +2,14 @@ import React, { useEffect, useState } from "react";
 import ReactDOM from "react-dom";
 import { useParams } from "react-router-dom";
 import { AspectRatioBox, Heading, Box, Stack, Badge } from "@chakra-ui/core";
-import Layout from "../components/templates/Layout";
+import { Layout } from "../components/templates/Layout";
 import TalkDisplay from "../components/TalkDisplay";
 import FAV from "../components/FAV";
 import { useTalks } from "../hooks/useTalks";
 import SpeakerDisplay from "../components/SpeakerDisplay";
 import { SponsorsDisplay } from "../components/Sponsors/SponsorsDisplay";
 import { Skeleton } from "../components/Skeleton";
-import { SCROLLVIEW_ID } from "../helpers/backToTop";
+import { initScrollView } from "../helpers/backToTop";
 
 export const Talk = () => {
   const [talk, setTalk] = useState({});
@@ -17,10 +17,7 @@ export const Talk = () => {
   const [talks] = useTalks();
   const { id } = useParams();
 
-  const scrollview = document.getElementById(SCROLLVIEW_ID);
-  if (scrollview) {
-    scrollview.scrollTo(0, 0);
-  }
+  initScrollView();
 
   const typeAndHour = () => {
     if (talk.formats) {

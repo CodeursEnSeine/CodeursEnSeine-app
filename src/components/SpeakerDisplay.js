@@ -62,6 +62,8 @@ const SpeakerDisplay = ({ speaker }) => {
                   as="a"
                   href={`https://twitter.com/${speaker.twitter.slice(1, speaker.twitter.length)}`}
                   size="xs"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   Twitter
                 </Button>
@@ -73,6 +75,8 @@ const SpeakerDisplay = ({ speaker }) => {
                   as="a"
                   href={`https://github.com/${speaker.github}`}
                   size="xs"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   Github
                 </Button>

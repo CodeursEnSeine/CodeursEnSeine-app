@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Layout from "../components/templates/Layout";
+import { Layout } from "../components/templates/Layout";
 import routes from "../routes";
 import { Heading } from "@chakra-ui/core";
 
