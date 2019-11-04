@@ -85,6 +85,12 @@
       "link": "https://developer.microsoft.com/en-us/advocates/index.html"
     },
     {
+      "name": "Orone",
+      "type": "silver",
+      "logo": "orone@web.png",
+      "link": "http://www.orone.com/"
+    },
+    {
       "name": "Digit",
       "type": "bronze",
       "logo": "digit@web.jpg",
