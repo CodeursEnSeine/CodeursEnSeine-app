@@ -14,6 +14,7 @@ import { Topbar } from "./components/Topbar";
 import { SCROLLVIEW_ID } from "./helpers/backToTop";
 import { NotFound404 } from "./pages/NotFound404";
 import { Sponsors } from "./pages/Sponsors";
+import { Sponsor } from "./pages/Sponsor";
 
 const updateCssViewportHeight = () => {
   let vh = window.innerHeight * 0.01;
@@ -66,6 +67,9 @@ function App() {
                     </Route>
                     <Route exact path={routes.sponsors.pathname}>
                       <Sponsors />
+                    </Route>
+                    <Route exact path={routes.sponsorsDetails.pathname}>
+                      <Sponsor />
                     </Route>
                     <Route path={routes.notFound.pathname}>
                       <NotFound404 />

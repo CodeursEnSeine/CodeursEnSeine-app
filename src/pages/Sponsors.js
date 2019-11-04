@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 import { Layout } from "../components/templates/Layout";
 import { sponsors } from "../components/Sponsors/sponsors.json";
 import {
@@ -13,8 +14,9 @@ import {
 } from "@chakra-ui/core";
 import { BASE_IMAGE } from "../components/Sponsors/SponsorsDisplay";
 import { initScrollView } from "../helpers/backToTop";
+import routes from "../routes";
 
-const mapping = {
+export const SPONSORS_COLOR_MAP = {
   gold: "yellow",
   silver: "gray",
   bronze: "orange",
@@ -22,7 +24,12 @@ const mapping = {
 };
 
 const Card = ({ sponsor }) => (
-  <Box rounded="lg" borderWidth={1}>
+  <Box
+    rounded="lg"
+    borderWidth={1}
+    as={Link}
+    to={routes.sponsorsDetails.pathname.replace(":name", sponsor.name)}
+  >
     <AspectRatioBox ratio={16 / 9}>
       <Image
         src={`${BASE_IMAGE}/${sponsor.logo}`}
@@ -50,7 +57,7 @@ const Card = ({ sponsor }) => (
         {sponsor.name}
       </Heading>
 
-      <Badge variantColor={mapping[sponsor.type]} px={2}>
+      <Badge variantColor={SPONSORS_COLOR_MAP[sponsor.type]} px={2}>
         {sponsor.type}
       </Badge>
     </Box>
@@ -78,7 +85,7 @@ export const Sponsors = () => {
         rel="noopener noreferrer"
         my={4}
       >
-        Application hébergé sur Clever Cloud
+        Hébergée par Clever Cloud
         <Icon ml={2} name="external-link" />
       </Box>
       <Stack spacing={8}>
@@ -90,10 +97,7 @@ export const Sponsors = () => {
             ))}
         </SimpleGrid>
 
-        <SimpleGrid
-          columns={{ xs: 1, sm: 2, md: 4 }}
-          spacing={{ xs: 2, md: 8 }}
-        >
+        <SimpleGrid columns={{ xs: 2, md: 4 }} spacing={{ xs: 2, md: 8 }}>
           {sponsors
             .filter(sponsor => sponsor.type === "silver")
             .map(sponsor => (
@@ -101,10 +105,7 @@ export const Sponsors = () => {
             ))}
         </SimpleGrid>
 
-        <SimpleGrid
-          columns={{ xs: 1, sm: 2, md: 4 }}
-          spacing={{ xs: 2, md: 8 }}
-        >
+        <SimpleGrid columns={{ xs: 2, md: 4 }} spacing={{ xs: 2, md: 8 }}>
           {sponsors
             .filter(sponsor => sponsor.type === "bronze")
             .map(sponsor => (
@@ -112,10 +113,7 @@ export const Sponsors = () => {
             ))}
         </SimpleGrid>
 
-        <SimpleGrid
-          columns={{ xs: 1, sm: 2, md: 4 }}
-          spacing={{ xs: 2, md: 8 }}
-        >
+        <SimpleGrid columns={{ xs: 2, md: 4 }} spacing={{ xs: 2, md: 8 }}>
           {sponsors
             .filter(sponsor => sponsor.type === "partner")
             .map(sponsor => (
