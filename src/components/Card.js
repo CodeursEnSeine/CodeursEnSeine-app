@@ -17,7 +17,7 @@ const Card = ({ talk, to, ...props }) => {
   return (
     <Box position="relative">
       <Box
-        as={to ? Link : "div"}
+        as={isTalk ? Link : "div"}
         to={to}
         d="block"
         boxShadow={isTalk ? "paper" : null}
