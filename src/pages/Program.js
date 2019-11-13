@@ -1,5 +1,5 @@
 import React, { Fragment, useEffect } from "react";
-import { Box } from "@chakra-ui/core";
+import { Box, Icon } from "@chakra-ui/core";
 import { useFavoriteContext } from "../contexts/FavoritesContext";
 import { Layout } from "../components/templates/Layout";
 import Card from "../components/Card";
@@ -101,6 +101,23 @@ export function Program({ isFavorite = false }) {
     <Layout>
       {loading && [...Array(20).keys()].map(key => <CardSkeleton key={key} />)}
       {!loading && <Box>{getContent()}</Box>}
+
+      <Box
+        rounded="lg"
+        color="brand.700"
+        display="flex"
+        alignItems="center"
+        justifyContent="center"
+        padding={2}
+        as="a"
+        href="https://www.clever-cloud.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        my={4}
+      >
+        Hébergée par Clever Cloud
+        <Icon ml={2} name="external-link" />
+      </Box>
     </Layout>
   );
 }
