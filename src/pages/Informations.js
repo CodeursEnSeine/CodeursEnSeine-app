@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Heading, Box, Text, Stack, Icon } from "@chakra-ui/core";
+import { Heading, Box, Text, Stack, Icon, Button } from "@chakra-ui/core";
 import { Layout } from "../components/templates/Layout";
 import { initScrollView } from "../helpers/backToTop";
 
@@ -27,14 +27,41 @@ export function Informations() {
         Toutes les informations sont disponible sur le site de Codeurs En Seine
         <Icon ml={2} name="external-link" />
       </Box>
-      <Heading as="h4" size="sm" mb={4}>
+
+      <Stack spacing={4}>
+        <Box>
+          <Text fontSize="1.4rem" mb={1}>
+            Plan des salles{" "}
+            <span role="img" aria-label="Emoji de stade">
+              🏟
+            </span>
+          </Text>
+
+          <Button
+            size="md"
+            rel="noopener noreferrer"
+            mt={2}
+            as="a"
+            href="/files/plan.pdf"
+            style={{ display: 'flex' }}
+            target="_blank"
+          >
+            Télécharger le plan
+          </Button>
+        </Box>
+      </Stack>
+
+      <Heading as="h4" size="sm" mb={4} mt={2}>
         Comment venir ?
       </Heading>
 
       <Stack spacing={4}>
         <Box>
           <Text fontSize="1.4rem" mb={1}>
-            Lieu de l'événement
+            Lieu de l'événement{" "}
+            <span role="img" aria-label="Emoji de point sur carte">
+              📍
+            </span>
           </Text>
           <Text>
             Kindarena - Palais des sports de Rouen
