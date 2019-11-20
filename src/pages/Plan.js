@@ -25,7 +25,7 @@ export const Plan = () => (
         as="a"
         href="/files/plan.pdf"
         display="flex"
-        target="_blank"
+        download="Plan des salles CES 2019"
       >
         Télécharger le plan
       </Button>
