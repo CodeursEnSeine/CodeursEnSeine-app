@@ -188,7 +188,20 @@
       ]
     },
     { "id": "N2XmjJJkwUASIHLHtoTR", "room": "A", "hour": "15:40" },
-    { "id": "7c8PP1lBaglzU3AwCkqB", "room": "C", "hour": "16:40" },
+    {
+      "id": "7c8PP1lBaglzU3AwCkqB",
+      "room": "C",
+      "hour": "16:40",
+      "speakers": [
+        {
+          "id": "q-richeux",
+          "displayName": "Quentin Richeux",
+          "bio": "<p>J'ai roulé ma petite bosse de Strasbourg à Nantes en passant par Niort et La Rochelle, pour des petites PME ou des grands comptes, Chef de projet ou Consultant - petits ou gros projets.</p><p>Chez Knp Labs, j'accompagne, je soutiens, je motive nos Happy Awesome Developers et nos Supers Clients. Pour cela j'applique les principes du manifeste agile le plus possible et j'utilise les outils de l'intelligence collaborative.</p>",
+          "photoURL": "https://avatars3.githubusercontent.com/u/49063819?s=400&v=4",
+          "github": "TalosRich"
+        }
+      ]
+    },
     { "id": "9UKGzjZ3bYCcoZtso63N", "room": "C", "hour": "15:40" },
     { "id": "smPOMJiKpyDx0Mi9TbwH", "room": "D", "hour": "15:40" },
     { "id": "XJtYkW6itYxC1qsLGtbr", "room": "A", "hour": "16:40" },
