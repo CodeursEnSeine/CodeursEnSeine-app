@@ -1,7 +1,7 @@
 import React from "react";
 import { ThemeProvider, CSSReset, Box, Flex } from "@chakra-ui/core";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { MdFavorite, MdToday, MdInfo, MdBusiness } from "react-icons/md";
+import { MdFavorite, MdToday, MdInfo, MdBusiness, MdMap } from "react-icons/md";
 import Navigation from "./components/Navigation";
 import { Program } from "./pages/Program";
 import { Informations } from "./pages/Informations";
@@ -15,6 +15,7 @@ import { SCROLLVIEW_ID } from "./helpers/backToTop";
 import { NotFound404 } from "./pages/NotFound404";
 import { Sponsors } from "./pages/Sponsors";
 import { Sponsor } from "./pages/Sponsor";
+import { Plan } from "./pages/Plan";
 
 const updateCssViewportHeight = () => {
   let vh = window.innerHeight * 0.01;
@@ -65,6 +66,9 @@ function App() {
                     <Route exact path={routes.talk.pathname}>
                       <Talk />
                     </Route>
+                    <Route exact path={routes.plan.pathname}>
+                      <Plan />
+                    </Route>
                     <Route exact path={routes.sponsors.pathname}>
                       <Sponsors />
                     </Route>
@@ -95,6 +99,12 @@ function App() {
                   iconElement={MdInfo}
                 >
                   Info
+                </NavigationAction>
+                <NavigationAction
+                  to={routes.plan.pathname}
+                  iconElement={MdMap}
+                >
+                  Plan
                 </NavigationAction>
                 <NavigationAction
                   to={routes.sponsors.pathname}

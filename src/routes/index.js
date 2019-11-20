@@ -19,6 +19,11 @@ export default {
     pathname: "/talk/:id",
     isTopLevel: false
   },
+  plan: {
+    title: "Plan des salles",
+    pathname: "/plan",
+    isTopLevel: true
+  },
   sponsors: {
     title: "Sponsors",
     pathname: "/sponsors",
