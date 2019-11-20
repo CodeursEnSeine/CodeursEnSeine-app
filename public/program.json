@@ -145,6 +145,13 @@
           "company": "Sopra Steria",
           "photoURL": "https://avatars2.githubusercontent.com/u/11617732?v=4",
           "github": "LirycMoaners"
+        },
+        {
+          "id": "g_gratecap",
+          "displayName": "Gabrielle Gratecap",
+          "bio": "28 ans, j’ai fait des études à la fac de biologie de Mont-Saint-Aignan jusqu’à l’obtention d’un Master en Neurosciences, puis ai enseigné au lycée pendant 2 ans. A la suite de ça, je me suis reconvertie dans l’informatique et travaille depuis Avril 2019 en tant que développeuse pour Sopra Steria à l’agence de Rouen.",
+          "company": "Sopra Steria",
+          "photoURL": "/images/speakers/gabrielle-gratecap.jpg"
         }
       ],
       "formats": "Quicky",

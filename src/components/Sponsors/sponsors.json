@@ -194,7 +194,7 @@
       "type": "bronze",
       "logo": "yes-we-hack@web.png",
       "link": "https://yeswehack.com/en/index.html",
-      "desc": "<p>Since 2013, YesWeHack connects a community of IT security experts with organizations or projects willing to better protect their information assets.</p><p>YesWeHack is made of 4 interdependent services strengthening cooperation : the first European Bug Bounty Platform : BountyFactory.io, a jobboard dedicated to security expertise and a Bug Bounty aggregator : FireBounty.com.</p>  <p>Last but not least, in 2017, YesWeHack launched ZeroDisclo.com : a non-profit platform providing the technical means and the required environment for ethical hackers to adopt a coordinated way for reporting vulnerabilities.</p>"
+      "desc": "<p>YesWeHack propose aux entreprises une approche disruptive de la cybersécurité : le Bug Bounty, modèle qui récompense les chercheurs à la vulnérabilité. Notre plateforme connecte 10 000 experts en cybersécurité (« hackers éthiques ») répartis dans 120 pays et des organisations de toutes tailles et de tous secteurs pour rechercher les vulnérabilités (bugs) de leurs sites web, applications mobiles, infrastructures et objets connectés, et sécuriser leurs périmètres exposés. Avec sa plateforme (la #1 en Europe), YesWeHack apporte une solution efficace, agile et économique, faisant de la sécurité un moteur de la transformation digitale des entreprises.</p>"
     },
     {
       "name": "WeLoveDevs",
